@@ -1,0 +1,22 @@
+.createMarker {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: rgb(50, 135, 225);
+  box-shadow: 0 0 13px 0px rgb(0 0 0 / 30%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.createMarker span {
+  margin-left: 1rem;
+}
+
+.createMarker svg {
+  height: 30px;
+  stroke: #fff;
+}

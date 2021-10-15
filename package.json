@@ -12,8 +12,8 @@
     "wpe-build": "next build"
   },
   "dependencies": {
-    "@faustjs/core": "^0.8.0",
-    "@faustjs/next": "^0.8.0",
+    "@faustjs/core": "^0.11.0",
+    "@faustjs/next": "^0.11.0",
     "@types/google-map-react": "^2.1.2",
     "google-map-react": "^2.1.10",
     "next": "^11.1.0",
@@ -23,7 +23,7 @@
     "sass": "^1.35.1"
   },
   "devDependencies": {
-    "@gqty/cli": "^1.0.4",
+    "@gqty/cli": "^2.0.1",
     "@types/react": "^17.0.11",
     "dotenv": "^10.0.0",
     "eslint": "^7.28.0",
