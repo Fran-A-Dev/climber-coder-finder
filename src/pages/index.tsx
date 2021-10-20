@@ -21,6 +21,7 @@ import LibationsFoodCard from "../../components/Card/LibationsFoodCard";
 import IndoorGymMarker from "../../components/Marker/IndoorGymMarker";
 import IndoorGymCard from "../../components/Card/IndoorGymCard";
 import CreateMarker from "../../components/CreateMarker/CreateMarker";
+import InfoWindow from "../../components/InfoWindow/InfoWindow";
 
 export default function Page() {
   const { useQuery } = client;
@@ -31,6 +32,7 @@ export default function Page() {
 
   const [isCardToggled, setIsCardToggled] = useState(false);
   const [selectedCrag, setSelectedCrag] = useState<OutdoorCrag>(undefined);
+  const [selectedPosition, setSelectedPosition] = useState();
   const [selectedProShop, setSelectedProShop] = useState<ProShop>(undefined);
   const [selectedLibationFood, setSelectedLibationFood] =
     useState<LibationFood>(undefined);
@@ -110,7 +112,7 @@ export default function Page() {
 
       {isCardToggled === true && (
         <>
-          <CragCard outdoorCrag={selectedCrag} />
+          <InfoWindow outdoorCrag={selectedCrag} />
           <ProShopCard proShop={selectedProShop} />
           <LibationsFoodCard libationFood={selectedLibationFood} />
           <IndoorGymCard indoorGym={selectedIndoorGym} />
@@ -126,4 +128,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     Page: Page,
     client,
   });
+}
+function position() {
+  throw new Error("Function not implemented.");
 }
