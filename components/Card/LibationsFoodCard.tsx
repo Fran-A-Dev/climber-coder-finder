@@ -1,12 +1,14 @@
 import { LibationFood } from "client";
+import { MouseEventHandler } from "react";
 
 import styles from "./Card.module.css";
 
 export interface CardProps {
   libationFood: LibationFood;
+  onCardClose: MouseEventHandler<HTMLDivElement>;
 }
 
-function Card({ libationFood }: CardProps) {
+function Card({ libationFood, onCardClose }: CardProps) {
   if (libationFood == undefined) {
     return null;
   }
@@ -14,6 +16,9 @@ function Card({ libationFood }: CardProps) {
   return (
     <div className={styles.card}>
       <div className="cragname">
+        <div onClick={onCardClose} className={styles.close}>
+          Close ✖️
+        </div>
         <span
           dangerouslySetInnerHTML={{ __html: libationFood?.restaurantName }}
         />
