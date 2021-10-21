@@ -783,6 +783,144 @@ export interface CommentToCommentConnectionWhereArgs {
   userId?: Maybe<Scalars["ID"]>;
 }
 
+/** Arguments for filtering the UserToFormSubmissionConnection connection */
+export interface UserToFormSubmissionConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: Maybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: Maybe<Scalars["Boolean"]>;
+  /** Specific ID of the object */
+  id?: Maybe<Scalars["Int"]>;
+  /** Array of IDs for the objects to retrieve */
+  in?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: Maybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: Maybe<Scalars["String"]>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: Maybe<Array<Maybe<Scalars["String"]>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** What paramater to use to order the objects by. */
+  orderby?: Maybe<Array<Maybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: Maybe<Scalars["ID"]>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Show posts with a specific password. */
+  password?: Maybe<Scalars["String"]>;
+  /** Show Posts based on a keyword search */
+  search?: Maybe<Scalars["String"]>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: Maybe<Array<Maybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: Maybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: Maybe<Scalars["String"]>;
+}
+
+/** Arguments for filtering the UserToIndoorGymConnection connection */
+export interface UserToIndoorGymConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: Maybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: Maybe<Scalars["Boolean"]>;
+  /** Specific ID of the object */
+  id?: Maybe<Scalars["Int"]>;
+  /** Array of IDs for the objects to retrieve */
+  in?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: Maybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: Maybe<Scalars["String"]>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: Maybe<Array<Maybe<Scalars["String"]>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** What paramater to use to order the objects by. */
+  orderby?: Maybe<Array<Maybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: Maybe<Scalars["ID"]>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Show posts with a specific password. */
+  password?: Maybe<Scalars["String"]>;
+  /** Show Posts based on a keyword search */
+  search?: Maybe<Scalars["String"]>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: Maybe<Array<Maybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: Maybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: Maybe<Scalars["String"]>;
+}
+
+/** Arguments for filtering the UserToLibationFoodConnection connection */
+export interface UserToLibationFoodConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: Maybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: Maybe<Scalars["Boolean"]>;
+  /** Specific ID of the object */
+  id?: Maybe<Scalars["Int"]>;
+  /** Array of IDs for the objects to retrieve */
+  in?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: Maybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: Maybe<Scalars["String"]>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: Maybe<Array<Maybe<Scalars["String"]>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** What paramater to use to order the objects by. */
+  orderby?: Maybe<Array<Maybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: Maybe<Scalars["ID"]>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Show posts with a specific password. */
+  password?: Maybe<Scalars["String"]>;
+  /** Show Posts based on a keyword search */
+  search?: Maybe<Scalars["String"]>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: Maybe<Array<Maybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: Maybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: Maybe<Scalars["String"]>;
+}
+
 /** Arguments for filtering the UserToMediaItemConnection connection */
 export interface UserToMediaItemConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
@@ -991,6 +1129,52 @@ export enum MediaItemSizeEnum {
   _1536X1536 = "_1536X1536",
   /** MediaItem with the 2048x2048 size */
   _2048X2048 = "_2048X2048",
+}
+
+/** Arguments for filtering the UserToOutdoorCragConnection connection */
+export interface UserToOutdoorCragConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: Maybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: Maybe<Scalars["Boolean"]>;
+  /** Specific ID of the object */
+  id?: Maybe<Scalars["Int"]>;
+  /** Array of IDs for the objects to retrieve */
+  in?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: Maybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: Maybe<Scalars["String"]>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: Maybe<Array<Maybe<Scalars["String"]>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** What paramater to use to order the objects by. */
+  orderby?: Maybe<Array<Maybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: Maybe<Scalars["ID"]>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Show posts with a specific password. */
+  password?: Maybe<Scalars["String"]>;
+  /** Show Posts based on a keyword search */
+  search?: Maybe<Scalars["String"]>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: Maybe<Array<Maybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: Maybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: Maybe<Scalars["String"]>;
 }
 
 /** Arguments for filtering the UserToPageConnection connection */
@@ -1753,6 +1937,52 @@ export enum TaxonomyEnum {
   TAG = "TAG",
 }
 
+/** Arguments for filtering the UserToProShopConnection connection */
+export interface UserToProShopConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: Maybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: Maybe<Scalars["Boolean"]>;
+  /** Specific ID of the object */
+  id?: Maybe<Scalars["Int"]>;
+  /** Array of IDs for the objects to retrieve */
+  in?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: Maybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: Maybe<Scalars["String"]>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: Maybe<Array<Maybe<Scalars["String"]>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** What paramater to use to order the objects by. */
+  orderby?: Maybe<Array<Maybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: Maybe<Scalars["ID"]>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Show posts with a specific password. */
+  password?: Maybe<Scalars["String"]>;
+  /** Show Posts based on a keyword search */
+  search?: Maybe<Scalars["String"]>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: Maybe<Array<Maybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: Maybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: Maybe<Scalars["String"]>;
+}
+
 /** Arguments for filtering the UserToContentRevisionUnionConnection connection */
 export interface UserToContentRevisionUnionConnectionWhereArgs {
   /** The Types of content to filter */
@@ -2007,6 +2237,14 @@ export enum FormSubmissionIdType {
 
 /** Arguments for filtering the RootQueryToFormSubmissionConnection connection */
 export interface RootQueryToFormSubmissionConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
   /** Filter the connection based on dates */
   dateQuery?: Maybe<DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
@@ -2057,6 +2295,14 @@ export enum IndoorGymIdType {
 
 /** Arguments for filtering the RootQueryToIndoorGymConnection connection */
 export interface RootQueryToIndoorGymConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
   /** Filter the connection based on dates */
   dateQuery?: Maybe<DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
@@ -2107,6 +2353,14 @@ export enum LibationFoodIdType {
 
 /** Arguments for filtering the RootQueryToLibationFoodConnection connection */
 export interface RootQueryToLibationFoodConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
   /** Filter the connection based on dates */
   dateQuery?: Maybe<DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
@@ -2289,6 +2543,14 @@ export enum OutdoorCragIdType {
 
 /** Arguments for filtering the RootQueryToOutdoorCragConnection connection */
 export interface RootQueryToOutdoorCragConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
   /** Filter the connection based on dates */
   dateQuery?: Maybe<DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
@@ -2531,6 +2793,14 @@ export enum ProShopIdType {
 
 /** Arguments for filtering the RootQueryToProShopConnection connection */
 export interface RootQueryToProShopConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
   /** Filter the connection based on dates */
   dateQuery?: Maybe<DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
@@ -2881,6 +3151,8 @@ export interface CreateCommentInput {
 
 /** Input for the createFormSubmission mutation */
 export interface CreateFormSubmissionInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -2897,6 +3169,8 @@ export interface CreateFormSubmissionInput {
 
 /** Input for the createIndoorGym mutation */
 export interface CreateIndoorGymInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -2913,6 +3187,8 @@ export interface CreateIndoorGymInput {
 
 /** Input for the createLibationFood mutation */
 export interface CreateLibationFoodInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -2975,6 +3251,8 @@ export enum MediaItemStatusEnum {
 
 /** Input for the createOutdoorCrag mutation */
 export interface CreateOutdoorCragInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -3131,6 +3409,8 @@ export interface CreatePostFormatInput {
 
 /** Input for the createProShop mutation */
 export interface CreateProShopInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -3459,6 +3739,8 @@ export interface UpdateCommentInput {
 
 /** Input for the updateFormSubmission mutation */
 export interface UpdateFormSubmissionInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -3477,6 +3759,8 @@ export interface UpdateFormSubmissionInput {
 
 /** Input for the updateIndoorGym mutation */
 export interface UpdateIndoorGymInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -3495,6 +3779,8 @@ export interface UpdateIndoorGymInput {
 
 /** Input for the updateLibationFood mutation */
 export interface UpdateLibationFoodInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -3549,6 +3835,8 @@ export interface UpdateMediaItemInput {
 
 /** Input for the updateOutdoorCrag mutation */
 export interface UpdateOutdoorCragInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -3653,6 +3941,8 @@ export interface UpdatePostFormatInput {
 
 /** Input for the updateProShop mutation */
 export interface UpdateProShopInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
   clientMutationId?: Maybe<Scalars["String"]>;
   /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
@@ -3778,8 +4068,8 @@ export const scalarsEnumsHash: import("gqty").ScalarsEnumsHash = {
   AvatarRatingEnum: true,
   CommentsConnectionOrderbyEnum: true,
   PostObjectFieldFormatEnum: true,
-  MediaItemSizeEnum: true,
   Float: true,
+  MediaItemSizeEnum: true,
   ContentTypesOfPostFormatEnum: true,
   ContentTypesOfTagEnum: true,
   TaxonomyEnum: true,
@@ -4945,11 +5235,41 @@ export const generatedSchema = {
     },
     extraCapabilities: { __type: "[String]" },
     firstName: { __type: "String" },
+    formSubmissions: {
+      __type: "UserToFormSubmissionConnection",
+      __args: {
+        first: "Int",
+        last: "Int",
+        after: "String",
+        before: "String",
+        where: "UserToFormSubmissionConnectionWhereArgs",
+      },
+    },
     id: { __type: "ID!" },
+    indoorGyms: {
+      __type: "UserToIndoorGymConnection",
+      __args: {
+        first: "Int",
+        last: "Int",
+        after: "String",
+        before: "String",
+        where: "UserToIndoorGymConnectionWhereArgs",
+      },
+    },
     isContentNode: { __type: "Boolean!" },
     isRestricted: { __type: "Boolean" },
     isTermNode: { __type: "Boolean!" },
     lastName: { __type: "String" },
+    libationFoods: {
+      __type: "UserToLibationFoodConnection",
+      __args: {
+        first: "Int",
+        last: "Int",
+        after: "String",
+        before: "String",
+        where: "UserToLibationFoodConnectionWhereArgs",
+      },
+    },
     locale: { __type: "String" },
     mediaItems: {
       __type: "UserToMediaItemConnection",
@@ -4964,6 +5284,16 @@ export const generatedSchema = {
     name: { __type: "String" },
     nicename: { __type: "String" },
     nickname: { __type: "String" },
+    outdoorCrags: {
+      __type: "UserToOutdoorCragConnection",
+      __args: {
+        first: "Int",
+        last: "Int",
+        after: "String",
+        before: "String",
+        where: "UserToOutdoorCragConnectionWhereArgs",
+      },
+    },
     pages: {
       __type: "UserToPageConnection",
       __args: {
@@ -4982,6 +5312,16 @@ export const generatedSchema = {
         after: "String",
         before: "String",
         where: "UserToPostConnectionWhereArgs",
+      },
+    },
+    proShops: {
+      __type: "UserToProShopConnection",
+      __args: {
+        first: "Int",
+        last: "Int",
+        after: "String",
+        before: "String",
+        where: "UserToProShopConnectionWhereArgs",
       },
     },
     registeredDate: { __type: "String" },
@@ -5215,6 +5555,302 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "EnqueuedStylesheet" },
   },
+  UserToFormSubmissionConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
+    dateQuery: { __type: "DateQueryInput" },
+    hasPassword: { __type: "Boolean" },
+    id: { __type: "Int" },
+    in: { __type: "[ID]" },
+    mimeType: { __type: "MimeTypeEnum" },
+    name: { __type: "String" },
+    nameIn: { __type: "[String]" },
+    notIn: { __type: "[ID]" },
+    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
+    parent: { __type: "ID" },
+    parentIn: { __type: "[ID]" },
+    parentNotIn: { __type: "[ID]" },
+    password: { __type: "String" },
+    search: { __type: "String" },
+    stati: { __type: "[PostStatusEnum]" },
+    status: { __type: "PostStatusEnum" },
+    title: { __type: "String" },
+  },
+  UserToFormSubmissionConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[UserToFormSubmissionConnectionEdge]" },
+    nodes: { __type: "[FormSubmission]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  UserToFormSubmissionConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "FormSubmission" },
+  },
+  FormSubmission: {
+    __typename: { __type: "String!" },
+    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
+    authorDatabaseId: { __type: "Int" },
+    authorId: { __type: "ID" },
+    conditionalTags: { __type: "ConditionalTags" },
+    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
+    databaseId: { __type: "Int!" },
+    date: { __type: "String" },
+    dateGmt: { __type: "String" },
+    desiredSlug: { __type: "String" },
+    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
+    email: { __type: "String" },
+    enclosure: { __type: "String" },
+    enqueuedScripts: {
+      __type: "ContentNodeToEnqueuedScriptConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    enqueuedStylesheets: {
+      __type: "ContentNodeToEnqueuedStylesheetConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    formSubmissionId: { __type: "Int!" },
+    guid: { __type: "String" },
+    id: { __type: "ID!" },
+    isContentNode: { __type: "Boolean!" },
+    isPreview: { __type: "Boolean" },
+    isRestricted: { __type: "Boolean" },
+    isTermNode: { __type: "Boolean!" },
+    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
+    link: { __type: "String" },
+    modified: { __type: "String" },
+    modifiedGmt: { __type: "String" },
+    name: { __type: "String" },
+    preview: { __type: "FormSubmissionToPreviewConnectionEdge" },
+    previewRevisionDatabaseId: { __type: "Int" },
+    previewRevisionId: { __type: "ID" },
+    slug: { __type: "String" },
+    status: { __type: "String" },
+    template: { __type: "ContentTemplate" },
+    templates: { __type: "[String]" },
+    topic: { __type: "String" },
+    uri: { __type: "String" },
+  },
+  NodeWithTemplate: {
+    __typename: { __type: "String!" },
+    template: { __type: "ContentTemplate" },
+    $on: { __type: "$NodeWithTemplate!" },
+  },
+  ContentTemplate: {
+    __typename: { __type: "String!" },
+    templateName: { __type: "String" },
+    $on: { __type: "$ContentTemplate!" },
+  },
+  NodeWithAuthor: {
+    __typename: { __type: "String!" },
+    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
+    authorDatabaseId: { __type: "Int" },
+    authorId: { __type: "ID" },
+    $on: { __type: "$NodeWithAuthor!" },
+  },
+  NodeWithAuthorToUserConnectionEdge: {
+    __typename: { __type: "String!" },
+    node: { __type: "User" },
+  },
+  ContentNodeToEnqueuedScriptConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[ContentNodeToEnqueuedScriptConnectionEdge]" },
+    nodes: { __type: "[EnqueuedScript]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  ContentNodeToEnqueuedScriptConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "EnqueuedScript" },
+  },
+  ContentNodeToEnqueuedStylesheetConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[ContentNodeToEnqueuedStylesheetConnectionEdge]" },
+    nodes: { __type: "[EnqueuedStylesheet]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  ContentNodeToEnqueuedStylesheetConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "EnqueuedStylesheet" },
+  },
+  ContentNodeToEditLastConnectionEdge: {
+    __typename: { __type: "String!" },
+    node: { __type: "User" },
+  },
+  FormSubmissionToPreviewConnectionEdge: {
+    __typename: { __type: "String!" },
+    node: { __type: "FormSubmission" },
+  },
+  UserToIndoorGymConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
+    dateQuery: { __type: "DateQueryInput" },
+    hasPassword: { __type: "Boolean" },
+    id: { __type: "Int" },
+    in: { __type: "[ID]" },
+    mimeType: { __type: "MimeTypeEnum" },
+    name: { __type: "String" },
+    nameIn: { __type: "[String]" },
+    notIn: { __type: "[ID]" },
+    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
+    parent: { __type: "ID" },
+    parentIn: { __type: "[ID]" },
+    parentNotIn: { __type: "[ID]" },
+    password: { __type: "String" },
+    search: { __type: "String" },
+    stati: { __type: "[PostStatusEnum]" },
+    status: { __type: "PostStatusEnum" },
+    title: { __type: "String" },
+  },
+  UserToIndoorGymConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[UserToIndoorGymConnectionEdge]" },
+    nodes: { __type: "[IndoorGym]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  UserToIndoorGymConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "IndoorGym" },
+  },
+  IndoorGym: {
+    __typename: { __type: "String!" },
+    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
+    authorDatabaseId: { __type: "Int" },
+    authorId: { __type: "ID" },
+    conditionalTags: { __type: "ConditionalTags" },
+    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
+    databaseId: { __type: "Int!" },
+    date: { __type: "String" },
+    dateGmt: { __type: "String" },
+    description: { __type: "String" },
+    desiredSlug: { __type: "String" },
+    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
+    enclosure: { __type: "String" },
+    enqueuedScripts: {
+      __type: "ContentNodeToEnqueuedScriptConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    enqueuedStylesheets: {
+      __type: "ContentNodeToEnqueuedStylesheetConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    guid: { __type: "String" },
+    gymName: { __type: "String" },
+    id: { __type: "ID!" },
+    indoorGymId: { __type: "Int!" },
+    isContentNode: { __type: "Boolean!" },
+    isPreview: { __type: "Boolean" },
+    isRestricted: { __type: "Boolean" },
+    isTermNode: { __type: "Boolean!" },
+    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
+    lat: { __type: "Float" },
+    link: { __type: "String" },
+    lng: { __type: "Float" },
+    modified: { __type: "String" },
+    modifiedGmt: { __type: "String" },
+    preview: { __type: "IndoorGymToPreviewConnectionEdge" },
+    previewRevisionDatabaseId: { __type: "Int" },
+    previewRevisionId: { __type: "ID" },
+    slug: { __type: "String" },
+    status: { __type: "String" },
+    template: { __type: "ContentTemplate" },
+    templates: { __type: "[String]" },
+    uri: { __type: "String" },
+  },
+  IndoorGymToPreviewConnectionEdge: {
+    __typename: { __type: "String!" },
+    node: { __type: "IndoorGym" },
+  },
+  UserToLibationFoodConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
+    dateQuery: { __type: "DateQueryInput" },
+    hasPassword: { __type: "Boolean" },
+    id: { __type: "Int" },
+    in: { __type: "[ID]" },
+    mimeType: { __type: "MimeTypeEnum" },
+    name: { __type: "String" },
+    nameIn: { __type: "[String]" },
+    notIn: { __type: "[ID]" },
+    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
+    parent: { __type: "ID" },
+    parentIn: { __type: "[ID]" },
+    parentNotIn: { __type: "[ID]" },
+    password: { __type: "String" },
+    search: { __type: "String" },
+    stati: { __type: "[PostStatusEnum]" },
+    status: { __type: "PostStatusEnum" },
+    title: { __type: "String" },
+  },
+  UserToLibationFoodConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[UserToLibationFoodConnectionEdge]" },
+    nodes: { __type: "[LibationFood]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  UserToLibationFoodConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "LibationFood" },
+  },
+  LibationFood: {
+    __typename: { __type: "String!" },
+    alcohol: { __type: "Boolean" },
+    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
+    authorDatabaseId: { __type: "Int" },
+    authorId: { __type: "ID" },
+    conditionalTags: { __type: "ConditionalTags" },
+    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
+    databaseId: { __type: "Int!" },
+    date: { __type: "String" },
+    dateGmt: { __type: "String" },
+    description: { __type: "String" },
+    desiredSlug: { __type: "String" },
+    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
+    enclosure: { __type: "String" },
+    enqueuedScripts: {
+      __type: "ContentNodeToEnqueuedScriptConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    enqueuedStylesheets: {
+      __type: "ContentNodeToEnqueuedStylesheetConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    guid: { __type: "String" },
+    id: { __type: "ID!" },
+    isContentNode: { __type: "Boolean!" },
+    isPreview: { __type: "Boolean" },
+    isRestricted: { __type: "Boolean" },
+    isTermNode: { __type: "Boolean!" },
+    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
+    lat: { __type: "Float" },
+    libationFoodId: { __type: "Int!" },
+    link: { __type: "String" },
+    lng: { __type: "Float" },
+    modified: { __type: "String" },
+    modifiedGmt: { __type: "String" },
+    preview: { __type: "LibationFoodToPreviewConnectionEdge" },
+    previewRevisionDatabaseId: { __type: "Int" },
+    previewRevisionId: { __type: "ID" },
+    restaurantName: { __type: "String" },
+    slug: { __type: "String" },
+    status: { __type: "String" },
+    template: { __type: "ContentTemplate" },
+    templates: { __type: "[String]" },
+    uri: { __type: "String" },
+  },
+  LibationFoodToPreviewConnectionEdge: {
+    __typename: { __type: "String!" },
+    node: { __type: "LibationFood" },
+  },
   UserToMediaItemConnectionWhereArgs: {
     author: { __type: "Int" },
     authorIn: { __type: "[ID]" },
@@ -5349,16 +5985,6 @@ export const generatedSchema = {
     },
     uri: { __type: "String" },
   },
-  NodeWithTemplate: {
-    __typename: { __type: "String!" },
-    template: { __type: "ContentTemplate" },
-    $on: { __type: "$NodeWithTemplate!" },
-  },
-  ContentTemplate: {
-    __typename: { __type: "String!" },
-    templateName: { __type: "String" },
-    $on: { __type: "$ContentTemplate!" },
-  },
   NodeWithTitle: {
     __typename: { __type: "String!" },
     title: {
@@ -5366,17 +5992,6 @@ export const generatedSchema = {
       __args: { format: "PostObjectFieldFormatEnum" },
     },
     $on: { __type: "$NodeWithTitle!" },
-  },
-  NodeWithAuthor: {
-    __typename: { __type: "String!" },
-    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
-    authorDatabaseId: { __type: "Int" },
-    authorId: { __type: "ID" },
-    $on: { __type: "$NodeWithAuthor!" },
-  },
-  NodeWithAuthorToUserConnectionEdge: {
-    __typename: { __type: "String!" },
-    node: { __type: "User" },
   },
   NodeWithComments: {
     __typename: { __type: "String!" },
@@ -5527,32 +6142,6 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "Comment" },
   },
-  ContentNodeToEnqueuedScriptConnection: {
-    __typename: { __type: "String!" },
-    edges: { __type: "[ContentNodeToEnqueuedScriptConnectionEdge]" },
-    nodes: { __type: "[EnqueuedScript]" },
-    pageInfo: { __type: "WPPageInfo" },
-  },
-  ContentNodeToEnqueuedScriptConnectionEdge: {
-    __typename: { __type: "String!" },
-    cursor: { __type: "String" },
-    node: { __type: "EnqueuedScript" },
-  },
-  ContentNodeToEnqueuedStylesheetConnection: {
-    __typename: { __type: "String!" },
-    edges: { __type: "[ContentNodeToEnqueuedStylesheetConnectionEdge]" },
-    nodes: { __type: "[EnqueuedStylesheet]" },
-    pageInfo: { __type: "WPPageInfo" },
-  },
-  ContentNodeToEnqueuedStylesheetConnectionEdge: {
-    __typename: { __type: "String!" },
-    cursor: { __type: "String" },
-    node: { __type: "EnqueuedStylesheet" },
-  },
-  ContentNodeToEditLastConnectionEdge: {
-    __typename: { __type: "String!" },
-    node: { __type: "User" },
-  },
   MediaDetails: {
     __typename: { __type: "String!" },
     file: { __type: "String" },
@@ -5585,6 +6174,91 @@ export const generatedSchema = {
     name: { __type: "String" },
     sourceUrl: { __type: "String" },
     width: { __type: "String" },
+  },
+  UserToOutdoorCragConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
+    dateQuery: { __type: "DateQueryInput" },
+    hasPassword: { __type: "Boolean" },
+    id: { __type: "Int" },
+    in: { __type: "[ID]" },
+    mimeType: { __type: "MimeTypeEnum" },
+    name: { __type: "String" },
+    nameIn: { __type: "[String]" },
+    notIn: { __type: "[ID]" },
+    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
+    parent: { __type: "ID" },
+    parentIn: { __type: "[ID]" },
+    parentNotIn: { __type: "[ID]" },
+    password: { __type: "String" },
+    search: { __type: "String" },
+    stati: { __type: "[PostStatusEnum]" },
+    status: { __type: "PostStatusEnum" },
+    title: { __type: "String" },
+  },
+  UserToOutdoorCragConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[UserToOutdoorCragConnectionEdge]" },
+    nodes: { __type: "[OutdoorCrag]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  UserToOutdoorCragConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "OutdoorCrag" },
+  },
+  OutdoorCrag: {
+    __typename: { __type: "String!" },
+    address: { __type: "String" },
+    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
+    authorDatabaseId: { __type: "Int" },
+    authorId: { __type: "ID" },
+    conditionalTags: { __type: "ConditionalTags" },
+    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
+    cragName: { __type: "String" },
+    databaseId: { __type: "Int!" },
+    date: { __type: "String" },
+    dateGmt: { __type: "String" },
+    desiredSlug: { __type: "String" },
+    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
+    enclosure: { __type: "String" },
+    enqueuedScripts: {
+      __type: "ContentNodeToEnqueuedScriptConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    enqueuedStylesheets: {
+      __type: "ContentNodeToEnqueuedStylesheetConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    guid: { __type: "String" },
+    id: { __type: "ID!" },
+    isContentNode: { __type: "Boolean!" },
+    isPreview: { __type: "Boolean" },
+    isRestricted: { __type: "Boolean" },
+    isTermNode: { __type: "Boolean!" },
+    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
+    lat: { __type: "Float" },
+    link: { __type: "String" },
+    lng: { __type: "Float" },
+    modified: { __type: "String" },
+    modifiedGmt: { __type: "String" },
+    outdoorCragId: { __type: "Int!" },
+    preview: { __type: "OutdoorCragToPreviewConnectionEdge" },
+    previewRevisionDatabaseId: { __type: "Int" },
+    previewRevisionId: { __type: "ID" },
+    routePic: { __type: "MediaItem" },
+    slug: { __type: "String" },
+    status: { __type: "String" },
+    suggestedRoutes: { __type: "String" },
+    template: { __type: "ContentTemplate" },
+    templates: { __type: "[String]" },
+    uri: { __type: "String" },
+  },
+  OutdoorCragToPreviewConnectionEdge: {
+    __typename: { __type: "String!" },
+    node: { __type: "OutdoorCrag" },
   },
   UserToPageConnectionWhereArgs: {
     author: { __type: "Int" },
@@ -6538,6 +7212,89 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "TermNode" },
   },
+  UserToProShopConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
+    dateQuery: { __type: "DateQueryInput" },
+    hasPassword: { __type: "Boolean" },
+    id: { __type: "Int" },
+    in: { __type: "[ID]" },
+    mimeType: { __type: "MimeTypeEnum" },
+    name: { __type: "String" },
+    nameIn: { __type: "[String]" },
+    notIn: { __type: "[ID]" },
+    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
+    parent: { __type: "ID" },
+    parentIn: { __type: "[ID]" },
+    parentNotIn: { __type: "[ID]" },
+    password: { __type: "String" },
+    search: { __type: "String" },
+    stati: { __type: "[PostStatusEnum]" },
+    status: { __type: "PostStatusEnum" },
+    title: { __type: "String" },
+  },
+  UserToProShopConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[UserToProShopConnectionEdge]" },
+    nodes: { __type: "[ProShop]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  UserToProShopConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "ProShop" },
+  },
+  ProShop: {
+    __typename: { __type: "String!" },
+    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
+    authorDatabaseId: { __type: "Int" },
+    authorId: { __type: "ID" },
+    conditionalTags: { __type: "ConditionalTags" },
+    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
+    databaseId: { __type: "Int!" },
+    date: { __type: "String" },
+    dateGmt: { __type: "String" },
+    description: { __type: "String" },
+    desiredSlug: { __type: "String" },
+    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
+    enclosure: { __type: "String" },
+    enqueuedScripts: {
+      __type: "ContentNodeToEnqueuedScriptConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    enqueuedStylesheets: {
+      __type: "ContentNodeToEnqueuedStylesheetConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    guid: { __type: "String" },
+    id: { __type: "ID!" },
+    isContentNode: { __type: "Boolean!" },
+    isPreview: { __type: "Boolean" },
+    isRestricted: { __type: "Boolean" },
+    isTermNode: { __type: "Boolean!" },
+    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
+    lat: { __type: "Float" },
+    link: { __type: "String" },
+    lng: { __type: "Float" },
+    modified: { __type: "String" },
+    modifiedGmt: { __type: "String" },
+    preview: { __type: "ProShopToPreviewConnectionEdge" },
+    previewRevisionDatabaseId: { __type: "Int" },
+    previewRevisionId: { __type: "ID" },
+    proShopId: { __type: "Int!" },
+    shopName: { __type: "String" },
+    slug: { __type: "String" },
+    status: { __type: "String" },
+    template: { __type: "ContentTemplate" },
+    templates: { __type: "[String]" },
+    uri: { __type: "String" },
+  },
+  ProShopToPreviewConnectionEdge: {
+    __typename: { __type: "String!" },
+    node: { __type: "ProShop" },
+  },
   UserToContentRevisionUnionConnectionWhereArgs: {
     contentTypes: { __type: "[ContentTypeEnum]" },
     dateQuery: { __type: "DateQueryInput" },
@@ -6733,52 +7490,11 @@ export const generatedSchema = {
     defaultCommentStatus: { __type: "String" },
     defaultPingStatus: { __type: "String" },
   },
-  FormSubmission: {
-    __typename: { __type: "String!" },
-    conditionalTags: { __type: "ConditionalTags" },
-    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
-    databaseId: { __type: "Int!" },
-    date: { __type: "String" },
-    dateGmt: { __type: "String" },
-    desiredSlug: { __type: "String" },
-    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
-    email: { __type: "String" },
-    enclosure: { __type: "String" },
-    enqueuedScripts: {
-      __type: "ContentNodeToEnqueuedScriptConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    enqueuedStylesheets: {
-      __type: "ContentNodeToEnqueuedStylesheetConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    formSubmissionId: { __type: "Int!" },
-    guid: { __type: "String" },
-    id: { __type: "ID!" },
-    isContentNode: { __type: "Boolean!" },
-    isPreview: { __type: "Boolean" },
-    isRestricted: { __type: "Boolean" },
-    isTermNode: { __type: "Boolean!" },
-    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
-    link: { __type: "String" },
-    modified: { __type: "String" },
-    modifiedGmt: { __type: "String" },
-    name: { __type: "String" },
-    preview: { __type: "FormSubmissionToPreviewConnectionEdge" },
-    previewRevisionDatabaseId: { __type: "Int" },
-    previewRevisionId: { __type: "ID" },
-    slug: { __type: "String" },
-    status: { __type: "String" },
-    template: { __type: "ContentTemplate" },
-    templates: { __type: "[String]" },
-    topic: { __type: "String" },
-    uri: { __type: "String" },
-  },
-  FormSubmissionToPreviewConnectionEdge: {
-    __typename: { __type: "String!" },
-    node: { __type: "FormSubmission" },
-  },
   RootQueryToFormSubmissionConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
     dateQuery: { __type: "DateQueryInput" },
     hasPassword: { __type: "Boolean" },
     id: { __type: "Int" },
@@ -6820,53 +7536,11 @@ export const generatedSchema = {
     title: { __type: "String" },
     url: { __type: "String" },
   },
-  IndoorGym: {
-    __typename: { __type: "String!" },
-    conditionalTags: { __type: "ConditionalTags" },
-    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
-    databaseId: { __type: "Int!" },
-    date: { __type: "String" },
-    dateGmt: { __type: "String" },
-    description: { __type: "String" },
-    desiredSlug: { __type: "String" },
-    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
-    enclosure: { __type: "String" },
-    enqueuedScripts: {
-      __type: "ContentNodeToEnqueuedScriptConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    enqueuedStylesheets: {
-      __type: "ContentNodeToEnqueuedStylesheetConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    guid: { __type: "String" },
-    gymName: { __type: "String" },
-    id: { __type: "ID!" },
-    indoorGymId: { __type: "Int!" },
-    isContentNode: { __type: "Boolean!" },
-    isPreview: { __type: "Boolean" },
-    isRestricted: { __type: "Boolean" },
-    isTermNode: { __type: "Boolean!" },
-    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
-    lat: { __type: "Float" },
-    link: { __type: "String" },
-    lng: { __type: "Float" },
-    modified: { __type: "String" },
-    modifiedGmt: { __type: "String" },
-    preview: { __type: "IndoorGymToPreviewConnectionEdge" },
-    previewRevisionDatabaseId: { __type: "Int" },
-    previewRevisionId: { __type: "ID" },
-    slug: { __type: "String" },
-    status: { __type: "String" },
-    template: { __type: "ContentTemplate" },
-    templates: { __type: "[String]" },
-    uri: { __type: "String" },
-  },
-  IndoorGymToPreviewConnectionEdge: {
-    __typename: { __type: "String!" },
-    node: { __type: "IndoorGym" },
-  },
   RootQueryToIndoorGymConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
     dateQuery: { __type: "DateQueryInput" },
     hasPassword: { __type: "Boolean" },
     id: { __type: "Int" },
@@ -6896,54 +7570,11 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "IndoorGym" },
   },
-  LibationFood: {
-    __typename: { __type: "String!" },
-    alcohol: { __type: "Boolean" },
-    conditionalTags: { __type: "ConditionalTags" },
-    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
-    databaseId: { __type: "Int!" },
-    date: { __type: "String" },
-    dateGmt: { __type: "String" },
-    description: { __type: "String" },
-    desiredSlug: { __type: "String" },
-    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
-    enclosure: { __type: "String" },
-    enqueuedScripts: {
-      __type: "ContentNodeToEnqueuedScriptConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    enqueuedStylesheets: {
-      __type: "ContentNodeToEnqueuedStylesheetConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    guid: { __type: "String" },
-    id: { __type: "ID!" },
-    isContentNode: { __type: "Boolean!" },
-    isPreview: { __type: "Boolean" },
-    isRestricted: { __type: "Boolean" },
-    isTermNode: { __type: "Boolean!" },
-    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
-    lat: { __type: "Float" },
-    libationFoodId: { __type: "Int!" },
-    link: { __type: "String" },
-    lng: { __type: "Float" },
-    modified: { __type: "String" },
-    modifiedGmt: { __type: "String" },
-    preview: { __type: "LibationFoodToPreviewConnectionEdge" },
-    previewRevisionDatabaseId: { __type: "Int" },
-    previewRevisionId: { __type: "ID" },
-    restaurantName: { __type: "String" },
-    slug: { __type: "String" },
-    status: { __type: "String" },
-    template: { __type: "ContentTemplate" },
-    templates: { __type: "[String]" },
-    uri: { __type: "String" },
-  },
-  LibationFoodToPreviewConnectionEdge: {
-    __typename: { __type: "String!" },
-    node: { __type: "LibationFood" },
-  },
   RootQueryToLibationFoodConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
     dateQuery: { __type: "DateQueryInput" },
     hasPassword: { __type: "Boolean" },
     id: { __type: "Int" },
@@ -7139,55 +7770,11 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "Menu" },
   },
-  OutdoorCrag: {
-    __typename: { __type: "String!" },
-    address: { __type: "String" },
-    conditionalTags: { __type: "ConditionalTags" },
-    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
-    cragName: { __type: "String" },
-    databaseId: { __type: "Int!" },
-    date: { __type: "String" },
-    dateGmt: { __type: "String" },
-    desiredSlug: { __type: "String" },
-    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
-    enclosure: { __type: "String" },
-    enqueuedScripts: {
-      __type: "ContentNodeToEnqueuedScriptConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    enqueuedStylesheets: {
-      __type: "ContentNodeToEnqueuedStylesheetConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    guid: { __type: "String" },
-    id: { __type: "ID!" },
-    isContentNode: { __type: "Boolean!" },
-    isPreview: { __type: "Boolean" },
-    isRestricted: { __type: "Boolean" },
-    isTermNode: { __type: "Boolean!" },
-    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
-    lat: { __type: "Float" },
-    link: { __type: "String" },
-    lng: { __type: "Float" },
-    modified: { __type: "String" },
-    modifiedGmt: { __type: "String" },
-    outdoorCragId: { __type: "Int!" },
-    preview: { __type: "OutdoorCragToPreviewConnectionEdge" },
-    previewRevisionDatabaseId: { __type: "Int" },
-    previewRevisionId: { __type: "ID" },
-    routePic: { __type: "MediaItem" },
-    slug: { __type: "String" },
-    status: { __type: "String" },
-    suggestedRoutes: { __type: "String" },
-    template: { __type: "ContentTemplate" },
-    templates: { __type: "[String]" },
-    uri: { __type: "String" },
-  },
-  OutdoorCragToPreviewConnectionEdge: {
-    __typename: { __type: "String!" },
-    node: { __type: "OutdoorCrag" },
-  },
   RootQueryToOutdoorCragConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
     dateQuery: { __type: "DateQueryInput" },
     hasPassword: { __type: "Boolean" },
     id: { __type: "Int" },
@@ -7351,53 +7938,11 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "Post" },
   },
-  ProShop: {
-    __typename: { __type: "String!" },
-    conditionalTags: { __type: "ConditionalTags" },
-    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
-    databaseId: { __type: "Int!" },
-    date: { __type: "String" },
-    dateGmt: { __type: "String" },
-    description: { __type: "String" },
-    desiredSlug: { __type: "String" },
-    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
-    enclosure: { __type: "String" },
-    enqueuedScripts: {
-      __type: "ContentNodeToEnqueuedScriptConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    enqueuedStylesheets: {
-      __type: "ContentNodeToEnqueuedStylesheetConnection",
-      __args: { first: "Int", last: "Int", after: "String", before: "String" },
-    },
-    guid: { __type: "String" },
-    id: { __type: "ID!" },
-    isContentNode: { __type: "Boolean!" },
-    isPreview: { __type: "Boolean" },
-    isRestricted: { __type: "Boolean" },
-    isTermNode: { __type: "Boolean!" },
-    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
-    lat: { __type: "Float" },
-    link: { __type: "String" },
-    lng: { __type: "Float" },
-    modified: { __type: "String" },
-    modifiedGmt: { __type: "String" },
-    preview: { __type: "ProShopToPreviewConnectionEdge" },
-    previewRevisionDatabaseId: { __type: "Int" },
-    previewRevisionId: { __type: "ID" },
-    proShopId: { __type: "Int!" },
-    shopName: { __type: "String" },
-    slug: { __type: "String" },
-    status: { __type: "String" },
-    template: { __type: "ContentTemplate" },
-    templates: { __type: "[String]" },
-    uri: { __type: "String" },
-  },
-  ProShopToPreviewConnectionEdge: {
-    __typename: { __type: "String!" },
-    node: { __type: "ProShop" },
-  },
   RootQueryToProShopConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
     dateQuery: { __type: "DateQueryInput" },
     hasPassword: { __type: "Boolean" },
     id: { __type: "Int" },
@@ -7668,6 +8213,7 @@ export const generatedSchema = {
     success: { __type: "Boolean" },
   },
   CreateFormSubmissionInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     menuOrder: { __type: "Int" },
@@ -7681,6 +8227,7 @@ export const generatedSchema = {
     formSubmission: { __type: "FormSubmission" },
   },
   CreateIndoorGymInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     menuOrder: { __type: "Int" },
@@ -7694,6 +8241,7 @@ export const generatedSchema = {
     indoorGym: { __type: "IndoorGym" },
   },
   CreateLibationFoodInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     menuOrder: { __type: "Int" },
@@ -7729,6 +8277,7 @@ export const generatedSchema = {
     mediaItem: { __type: "MediaItem" },
   },
   CreateOutdoorCragInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     menuOrder: { __type: "Int" },
@@ -7827,6 +8376,7 @@ export const generatedSchema = {
     postFormat: { __type: "PostFormat" },
   },
   CreateProShopInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     menuOrder: { __type: "Int" },
@@ -8131,6 +8681,7 @@ export const generatedSchema = {
     success: { __type: "Boolean" },
   },
   UpdateFormSubmissionInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     id: { __type: "ID!" },
@@ -8145,6 +8696,7 @@ export const generatedSchema = {
     formSubmission: { __type: "FormSubmission" },
   },
   UpdateIndoorGymInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     id: { __type: "ID!" },
@@ -8159,6 +8711,7 @@ export const generatedSchema = {
     indoorGym: { __type: "IndoorGym" },
   },
   UpdateLibationFoodInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     id: { __type: "ID!" },
@@ -8196,6 +8749,7 @@ export const generatedSchema = {
     mediaItem: { __type: "MediaItem" },
   },
   UpdateOutdoorCragInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     id: { __type: "ID!" },
@@ -8268,6 +8822,7 @@ export const generatedSchema = {
     postFormat: { __type: "PostFormat" },
   },
   UpdateProShopInput: {
+    authorId: { __type: "ID" },
     clientMutationId: { __type: "String" },
     date: { __type: "String" },
     id: { __type: "ID!" },
@@ -8372,20 +8927,20 @@ export const generatedSchema = {
       "Taxonomy",
       "User",
       "Comment",
+      "FormSubmission",
+      "IndoorGym",
+      "LibationFood",
       "MediaItem",
+      "OutdoorCrag",
       "Page",
       "Post",
       "PostFormat",
       "Tag",
+      "ProShop",
       "UserRole",
-      "FormSubmission",
-      "IndoorGym",
-      "LibationFood",
       "Menu",
       "MenuItem",
-      "OutdoorCrag",
       "Plugin",
-      "ProShop",
       "Theme",
       "CommentAuthor",
     ],
@@ -8394,60 +8949,69 @@ export const generatedSchema = {
       "Category",
       "ContentType",
       "User",
+      "FormSubmission",
+      "IndoorGym",
+      "LibationFood",
       "MediaItem",
+      "OutdoorCrag",
       "Page",
       "Post",
       "PostFormat",
       "Tag",
-      "FormSubmission",
-      "IndoorGym",
-      "LibationFood",
-      "OutdoorCrag",
       "ProShop",
     ],
     DatabaseIdentifier: [
       "Category",
       "User",
       "Comment",
+      "FormSubmission",
+      "IndoorGym",
+      "LibationFood",
       "MediaItem",
+      "OutdoorCrag",
       "Page",
       "Post",
       "PostFormat",
       "Tag",
-      "FormSubmission",
-      "IndoorGym",
-      "LibationFood",
+      "ProShop",
       "Menu",
       "MenuItem",
-      "OutdoorCrag",
-      "ProShop",
     ],
     HierarchicalTermNode: ["Category"],
     MenuItemLinkable: ["Category", "Page", "Post", "Tag"],
     EnqueuedAsset: ["EnqueuedScript", "EnqueuedStylesheet"],
     Commenter: ["User", "CommentAuthor"],
     ContentNode: [
-      "MediaItem",
-      "Page",
-      "Post",
       "FormSubmission",
       "IndoorGym",
       "LibationFood",
+      "MediaItem",
       "OutdoorCrag",
+      "Page",
+      "Post",
       "ProShop",
     ],
     NodeWithTemplate: [
-      "MediaItem",
-      "Page",
-      "Post",
       "FormSubmission",
       "IndoorGym",
       "LibationFood",
+      "MediaItem",
       "OutdoorCrag",
+      "Page",
+      "Post",
+      "ProShop",
+    ],
+    NodeWithAuthor: [
+      "FormSubmission",
+      "IndoorGym",
+      "LibationFood",
+      "MediaItem",
+      "OutdoorCrag",
+      "Page",
+      "Post",
       "ProShop",
     ],
     NodeWithTitle: ["MediaItem", "Page", "Post"],
-    NodeWithAuthor: ["MediaItem", "Page", "Post"],
     NodeWithComments: ["MediaItem", "Page", "Post"],
     HierarchicalContentNode: ["MediaItem", "Page"],
     NodeWithContentEditor: ["Page", "Post"],
@@ -9233,20 +9797,20 @@ export interface Node {
     | "Taxonomy"
     | "User"
     | "Comment"
+    | "FormSubmission"
+    | "IndoorGym"
+    | "LibationFood"
     | "MediaItem"
+    | "OutdoorCrag"
     | "Page"
     | "Post"
     | "PostFormat"
     | "Tag"
+    | "ProShop"
     | "UserRole"
-    | "FormSubmission"
-    | "IndoorGym"
-    | "LibationFood"
     | "Menu"
     | "MenuItem"
-    | "OutdoorCrag"
     | "Plugin"
-    | "ProShop"
     | "Theme"
     | "CommentAuthor";
   /**
@@ -9368,15 +9932,15 @@ export interface UniformResourceIdentifiable {
     | "Category"
     | "ContentType"
     | "User"
+    | "FormSubmission"
+    | "IndoorGym"
+    | "LibationFood"
     | "MediaItem"
+    | "OutdoorCrag"
     | "Page"
     | "Post"
     | "PostFormat"
     | "Tag"
-    | "FormSubmission"
-    | "IndoorGym"
-    | "LibationFood"
-    | "OutdoorCrag"
     | "ProShop";
   conditionalTags?: Maybe<ConditionalTags>;
   /**
@@ -9699,18 +10263,18 @@ export interface DatabaseIdentifier {
     | "Category"
     | "User"
     | "Comment"
+    | "FormSubmission"
+    | "IndoorGym"
+    | "LibationFood"
     | "MediaItem"
+    | "OutdoorCrag"
     | "Page"
     | "Post"
     | "PostFormat"
     | "Tag"
-    | "FormSubmission"
-    | "IndoorGym"
-    | "LibationFood"
+    | "ProShop"
     | "Menu"
-    | "MenuItem"
-    | "OutdoorCrag"
-    | "ProShop";
+    | "MenuItem";
   /**
    * The unique identifier stored in the database
    */
@@ -9861,13 +10425,13 @@ export interface CategoryToContentNodeConnectionEdge {
  */
 export interface ContentNode {
   __typename?:
-    | "MediaItem"
-    | "Page"
-    | "Post"
     | "FormSubmission"
     | "IndoorGym"
     | "LibationFood"
+    | "MediaItem"
     | "OutdoorCrag"
+    | "Page"
+    | "Post"
     | "ProShop";
   conditionalTags?: Maybe<ConditionalTags>;
   /**
@@ -10642,9 +11206,59 @@ export interface User {
    */
   firstName?: Maybe<ScalarsEnums["String"]>;
   /**
+   * Connection between the User type and the formSubmission type
+   */
+  formSubmissions: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>
+    /**
+     * Arguments for filtering the connection
+     */;
+    where?: Maybe<UserToFormSubmissionConnectionWhereArgs>;
+  }) => Maybe<UserToFormSubmissionConnection>;
+  /**
    * The globally unique identifier for the user object.
    */
   id: ScalarsEnums["ID"];
+  /**
+   * Connection between the User type and the indoorGym type
+   */
+  indoorGyms: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>
+    /**
+     * Arguments for filtering the connection
+     */;
+    where?: Maybe<UserToIndoorGymConnectionWhereArgs>;
+  }) => Maybe<UserToIndoorGymConnection>;
   /**
    * Whether the node is a Content Node
    */
@@ -10661,6 +11275,31 @@ export interface User {
    * Last name of the user. This is equivalent to the WP_User-&gt;user_last_name property.
    */
   lastName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the User type and the libationFood type
+   */
+  libationFoods: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>
+    /**
+     * Arguments for filtering the connection
+     */;
+    where?: Maybe<UserToLibationFoodConnectionWhereArgs>;
+  }) => Maybe<UserToLibationFoodConnection>;
   /**
    * The preferred language locale set for the user. Value derived from get_user_locale().
    */
@@ -10702,6 +11341,31 @@ export interface User {
    * Nickname of the user.
    */
   nickname?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the User type and the outdoorCrag type
+   */
+  outdoorCrags: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>
+    /**
+     * Arguments for filtering the connection
+     */;
+    where?: Maybe<UserToOutdoorCragConnectionWhereArgs>;
+  }) => Maybe<UserToOutdoorCragConnection>;
   /**
    * Connection between the User type and the page type
    */
@@ -10752,6 +11416,31 @@ export interface User {
      */;
     where?: Maybe<UserToPostConnectionWhereArgs>;
   }) => Maybe<UserToPostConnection>;
+  /**
+   * Connection between the User type and the proShop type
+   */
+  proShops: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>
+    /**
+     * Arguments for filtering the connection
+     */;
+    where?: Maybe<UserToProShopConnectionWhereArgs>;
+  }) => Maybe<UserToProShopConnection>;
   /**
    * The date the user registered or was created. The field follows a full ISO8601 date string format.
    */
@@ -11190,6 +11879,795 @@ export interface UserToEnqueuedStylesheetConnectionEdge {
 }
 
 /**
+ * Connection between the User type and the formSubmission type
+ */
+export interface UserToFormSubmissionConnection {
+  __typename?: "UserToFormSubmissionConnection";
+  /**
+   * Edges for the UserToFormSubmissionConnection connection
+   */
+  edges?: Maybe<Array<Maybe<UserToFormSubmissionConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<FormSubmission>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface UserToFormSubmissionConnectionEdge {
+  __typename?: "UserToFormSubmissionConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<FormSubmission>;
+}
+
+/**
+ * The formSubmission type
+ */
+export interface FormSubmission {
+  __typename?: "FormSubmission";
+  /**
+   * Connection between the NodeWithAuthor type and the User type
+   */
+  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
+  /**
+   * The database identifier of the author of the node
+   */
+  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The globally unique identifier of the author of the node
+   */
+  authorId?: Maybe<ScalarsEnums["ID"]>;
+  conditionalTags?: Maybe<ConditionalTags>;
+  /**
+   * Connection between the ContentNode type and the ContentType type
+   */
+  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
+  /**
+   * The unique identifier stored in the database
+   */
+  databaseId: ScalarsEnums["Int"];
+  /**
+   * Post publishing date.
+   */
+  date?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The publishing date set in GMT.
+   */
+  dateGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The desired slug of the post
+   */
+  desiredSlug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
+   */
+  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
+  email?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The RSS enclosure for the object
+   */
+  enclosure?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedScript type
+   */
+  enqueuedScripts: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedStylesheet type
+   */
+  enqueuedStylesheets: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of the databaseId field
+   */
+  formSubmissionId: ScalarsEnums["Int"];
+  /**
+   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
+   */
+  guid?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The globally unique identifier of the formsubmission object.
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Whether the node is a Content Node
+   */
+  isContentNode: ScalarsEnums["Boolean"];
+  /**
+   * Whether the object is a node in the preview state
+   */
+  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the object is restricted from the current viewer
+   */
+  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the node is a Term
+   */
+  isTermNode: ScalarsEnums["Boolean"];
+  /**
+   * The user that most recently edited the node
+   */
+  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
+  /**
+   * The permalink of the post
+   */
+  link?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
+   */
+  modified?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
+   */
+  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
+  name?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the formSubmission type and the formSubmission type
+   */
+  preview?: Maybe<FormSubmissionToPreviewConnectionEdge>;
+  /**
+   * The database id of the preview node
+   */
+  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Whether the object is a node in the preview state
+   */
+  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
+   */
+  slug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The current status of the object
+   */
+  status?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The template assigned to the node
+   */
+  template?: Maybe<ContentTemplate>;
+  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  topic?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The unique resource identifier path
+   */
+  uri?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A node that can have a template associated with it
+ */
+export interface NodeWithTemplate {
+  __typename?:
+    | "FormSubmission"
+    | "IndoorGym"
+    | "LibationFood"
+    | "MediaItem"
+    | "OutdoorCrag"
+    | "Page"
+    | "Post"
+    | "ProShop";
+  /**
+   * The template assigned to the node
+   */
+  template?: Maybe<ContentTemplate>;
+  $on: $NodeWithTemplate;
+}
+
+/**
+ * The template assigned to a node of content
+ */
+export interface ContentTemplate {
+  __typename?: "DefaultTemplate" | "Template_FullWidth";
+  /**
+   * The name of the template
+   */
+  templateName?: Maybe<ScalarsEnums["String"]>;
+  $on: $ContentTemplate;
+}
+
+/**
+ * A node that can have an author assigned to it
+ */
+export interface NodeWithAuthor {
+  __typename?:
+    | "FormSubmission"
+    | "IndoorGym"
+    | "LibationFood"
+    | "MediaItem"
+    | "OutdoorCrag"
+    | "Page"
+    | "Post"
+    | "ProShop";
+  /**
+   * Connection between the NodeWithAuthor type and the User type
+   */
+  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
+  /**
+   * The database identifier of the author of the node
+   */
+  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The globally unique identifier of the author of the node
+   */
+  authorId?: Maybe<ScalarsEnums["ID"]>;
+  $on: $NodeWithAuthor;
+}
+
+/**
+ * Connection between the NodeWithAuthor type and the User type
+ */
+export interface NodeWithAuthorToUserConnectionEdge {
+  __typename?: "NodeWithAuthorToUserConnectionEdge";
+  /**
+   * The node of the connection, without the edges
+   */
+  node?: Maybe<User>;
+}
+
+/**
+ * Connection between the ContentNode type and the EnqueuedScript type
+ */
+export interface ContentNodeToEnqueuedScriptConnection {
+  __typename?: "ContentNodeToEnqueuedScriptConnection";
+  /**
+   * Edges for the ContentNodeToEnqueuedScriptConnection connection
+   */
+  edges?: Maybe<Array<Maybe<ContentNodeToEnqueuedScriptConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<EnqueuedScript>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface ContentNodeToEnqueuedScriptConnectionEdge {
+  __typename?: "ContentNodeToEnqueuedScriptConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<EnqueuedScript>;
+}
+
+/**
+ * Connection between the ContentNode type and the EnqueuedStylesheet type
+ */
+export interface ContentNodeToEnqueuedStylesheetConnection {
+  __typename?: "ContentNodeToEnqueuedStylesheetConnection";
+  /**
+   * Edges for the ContentNodeToEnqueuedStylesheetConnection connection
+   */
+  edges?: Maybe<Array<Maybe<ContentNodeToEnqueuedStylesheetConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<EnqueuedStylesheet>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface ContentNodeToEnqueuedStylesheetConnectionEdge {
+  __typename?: "ContentNodeToEnqueuedStylesheetConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<EnqueuedStylesheet>;
+}
+
+/**
+ * Connection between the ContentNode type and the User type
+ */
+export interface ContentNodeToEditLastConnectionEdge {
+  __typename?: "ContentNodeToEditLastConnectionEdge";
+  /**
+   * The node of the connection, without the edges
+   */
+  node?: Maybe<User>;
+}
+
+/**
+ * Connection between the formSubmission type and the formSubmission type
+ */
+export interface FormSubmissionToPreviewConnectionEdge {
+  __typename?: "FormSubmissionToPreviewConnectionEdge";
+  /**
+   * The node of the connection, without the edges
+   */
+  node?: Maybe<FormSubmission>;
+}
+
+/**
+ * Connection between the User type and the indoorGym type
+ */
+export interface UserToIndoorGymConnection {
+  __typename?: "UserToIndoorGymConnection";
+  /**
+   * Edges for the UserToIndoorGymConnection connection
+   */
+  edges?: Maybe<Array<Maybe<UserToIndoorGymConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<IndoorGym>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface UserToIndoorGymConnectionEdge {
+  __typename?: "UserToIndoorGymConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<IndoorGym>;
+}
+
+/**
+ * The indoorGym type
+ */
+export interface IndoorGym {
+  __typename?: "IndoorGym";
+  /**
+   * Connection between the NodeWithAuthor type and the User type
+   */
+  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
+  /**
+   * The database identifier of the author of the node
+   */
+  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The globally unique identifier of the author of the node
+   */
+  authorId?: Maybe<ScalarsEnums["ID"]>;
+  conditionalTags?: Maybe<ConditionalTags>;
+  /**
+   * Connection between the ContentNode type and the ContentType type
+   */
+  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
+  /**
+   * The unique identifier stored in the database
+   */
+  databaseId: ScalarsEnums["Int"];
+  /**
+   * Post publishing date.
+   */
+  date?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The publishing date set in GMT.
+   */
+  dateGmt?: Maybe<ScalarsEnums["String"]>;
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The desired slug of the post
+   */
+  desiredSlug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
+   */
+  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
+  /**
+   * The RSS enclosure for the object
+   */
+  enclosure?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedScript type
+   */
+  enqueuedScripts: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedStylesheet type
+   */
+  enqueuedStylesheets: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
+  /**
+   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
+   */
+  guid?: Maybe<ScalarsEnums["String"]>;
+  gymName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The globally unique identifier of the indoorgym object.
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of the databaseId field
+   */
+  indoorGymId: ScalarsEnums["Int"];
+  /**
+   * Whether the node is a Content Node
+   */
+  isContentNode: ScalarsEnums["Boolean"];
+  /**
+   * Whether the object is a node in the preview state
+   */
+  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the object is restricted from the current viewer
+   */
+  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the node is a Term
+   */
+  isTermNode: ScalarsEnums["Boolean"];
+  /**
+   * The user that most recently edited the node
+   */
+  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
+  lat?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * The permalink of the post
+   */
+  link?: Maybe<ScalarsEnums["String"]>;
+  lng?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
+   */
+  modified?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
+   */
+  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the indoorGym type and the indoorGym type
+   */
+  preview?: Maybe<IndoorGymToPreviewConnectionEdge>;
+  /**
+   * The database id of the preview node
+   */
+  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Whether the object is a node in the preview state
+   */
+  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
+   */
+  slug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The current status of the object
+   */
+  status?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The template assigned to the node
+   */
+  template?: Maybe<ContentTemplate>;
+  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * The unique resource identifier path
+   */
+  uri?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Connection between the indoorGym type and the indoorGym type
+ */
+export interface IndoorGymToPreviewConnectionEdge {
+  __typename?: "IndoorGymToPreviewConnectionEdge";
+  /**
+   * The node of the connection, without the edges
+   */
+  node?: Maybe<IndoorGym>;
+}
+
+/**
+ * Connection between the User type and the libationFood type
+ */
+export interface UserToLibationFoodConnection {
+  __typename?: "UserToLibationFoodConnection";
+  /**
+   * Edges for the UserToLibationFoodConnection connection
+   */
+  edges?: Maybe<Array<Maybe<UserToLibationFoodConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<LibationFood>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface UserToLibationFoodConnectionEdge {
+  __typename?: "UserToLibationFoodConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<LibationFood>;
+}
+
+/**
+ * The libationFood type
+ */
+export interface LibationFood {
+  __typename?: "LibationFood";
+  alcohol?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Connection between the NodeWithAuthor type and the User type
+   */
+  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
+  /**
+   * The database identifier of the author of the node
+   */
+  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The globally unique identifier of the author of the node
+   */
+  authorId?: Maybe<ScalarsEnums["ID"]>;
+  conditionalTags?: Maybe<ConditionalTags>;
+  /**
+   * Connection between the ContentNode type and the ContentType type
+   */
+  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
+  /**
+   * The unique identifier stored in the database
+   */
+  databaseId: ScalarsEnums["Int"];
+  /**
+   * Post publishing date.
+   */
+  date?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The publishing date set in GMT.
+   */
+  dateGmt?: Maybe<ScalarsEnums["String"]>;
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The desired slug of the post
+   */
+  desiredSlug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
+   */
+  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
+  /**
+   * The RSS enclosure for the object
+   */
+  enclosure?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedScript type
+   */
+  enqueuedScripts: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedStylesheet type
+   */
+  enqueuedStylesheets: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
+  /**
+   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
+   */
+  guid?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The globally unique identifier of the libationfood object.
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Whether the node is a Content Node
+   */
+  isContentNode: ScalarsEnums["Boolean"];
+  /**
+   * Whether the object is a node in the preview state
+   */
+  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the object is restricted from the current viewer
+   */
+  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the node is a Term
+   */
+  isTermNode: ScalarsEnums["Boolean"];
+  /**
+   * The user that most recently edited the node
+   */
+  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
+  lat?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of the databaseId field
+   */
+  libationFoodId: ScalarsEnums["Int"];
+  /**
+   * The permalink of the post
+   */
+  link?: Maybe<ScalarsEnums["String"]>;
+  lng?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
+   */
+  modified?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
+   */
+  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the libationFood type and the libationFood type
+   */
+  preview?: Maybe<LibationFoodToPreviewConnectionEdge>;
+  /**
+   * The database id of the preview node
+   */
+  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Whether the object is a node in the preview state
+   */
+  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
+  restaurantName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
+   */
+  slug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The current status of the object
+   */
+  status?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The template assigned to the node
+   */
+  template?: Maybe<ContentTemplate>;
+  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * The unique resource identifier path
+   */
+  uri?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Connection between the libationFood type and the libationFood type
+ */
+export interface LibationFoodToPreviewConnectionEdge {
+  __typename?: "LibationFoodToPreviewConnectionEdge";
+  /**
+   * The node of the connection, without the edges
+   */
+  node?: Maybe<LibationFood>;
+}
+
+/**
  * Connection between the User type and the mediaItem type
  */
 export interface UserToMediaItemConnection {
@@ -11562,38 +13040,6 @@ export interface MediaItem {
 }
 
 /**
- * A node that can have a template associated with it
- */
-export interface NodeWithTemplate {
-  __typename?:
-    | "MediaItem"
-    | "Page"
-    | "Post"
-    | "FormSubmission"
-    | "IndoorGym"
-    | "LibationFood"
-    | "OutdoorCrag"
-    | "ProShop";
-  /**
-   * The template assigned to the node
-   */
-  template?: Maybe<ContentTemplate>;
-  $on: $NodeWithTemplate;
-}
-
-/**
- * The template assigned to a node of content
- */
-export interface ContentTemplate {
-  __typename?: "DefaultTemplate" | "Template_FullWidth";
-  /**
-   * The name of the template
-   */
-  templateName?: Maybe<ScalarsEnums["String"]>;
-  $on: $ContentTemplate;
-}
-
-/**
  * A node that NodeWith a title
  */
 export interface NodeWithTitle {
@@ -11608,37 +13054,6 @@ export interface NodeWithTitle {
     format?: Maybe<PostObjectFieldFormatEnum>;
   }) => Maybe<ScalarsEnums["String"]>;
   $on: $NodeWithTitle;
-}
-
-/**
- * A node that can have an author assigned to it
- */
-export interface NodeWithAuthor {
-  __typename?: "MediaItem" | "Page" | "Post";
-  /**
-   * Connection between the NodeWithAuthor type and the User type
-   */
-  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
-  /**
-   * The database identifier of the author of the node
-   */
-  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * The globally unique identifier of the author of the node
-   */
-  authorId?: Maybe<ScalarsEnums["ID"]>;
-  $on: $NodeWithAuthor;
-}
-
-/**
- * Connection between the NodeWithAuthor type and the User type
- */
-export interface NodeWithAuthorToUserConnectionEdge {
-  __typename?: "NodeWithAuthorToUserConnectionEdge";
-  /**
-   * The node of the connection, without the edges
-   */
-  node?: Maybe<User>;
 }
 
 /**
@@ -11845,85 +13260,6 @@ export interface MediaItemToCommentConnectionEdge {
 }
 
 /**
- * Connection between the ContentNode type and the EnqueuedScript type
- */
-export interface ContentNodeToEnqueuedScriptConnection {
-  __typename?: "ContentNodeToEnqueuedScriptConnection";
-  /**
-   * Edges for the ContentNodeToEnqueuedScriptConnection connection
-   */
-  edges?: Maybe<Array<Maybe<ContentNodeToEnqueuedScriptConnectionEdge>>>;
-  /**
-   * The nodes of the connection, without the edges
-   */
-  nodes?: Maybe<Array<Maybe<EnqueuedScript>>>;
-  /**
-   * Information about pagination in a connection.
-   */
-  pageInfo?: Maybe<WPPageInfo>;
-}
-
-/**
- * An edge in a connection
- */
-export interface ContentNodeToEnqueuedScriptConnectionEdge {
-  __typename?: "ContentNodeToEnqueuedScriptConnectionEdge";
-  /**
-   * A cursor for use in pagination
-   */
-  cursor?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The item at the end of the edge
-   */
-  node?: Maybe<EnqueuedScript>;
-}
-
-/**
- * Connection between the ContentNode type and the EnqueuedStylesheet type
- */
-export interface ContentNodeToEnqueuedStylesheetConnection {
-  __typename?: "ContentNodeToEnqueuedStylesheetConnection";
-  /**
-   * Edges for the ContentNodeToEnqueuedStylesheetConnection connection
-   */
-  edges?: Maybe<Array<Maybe<ContentNodeToEnqueuedStylesheetConnectionEdge>>>;
-  /**
-   * The nodes of the connection, without the edges
-   */
-  nodes?: Maybe<Array<Maybe<EnqueuedStylesheet>>>;
-  /**
-   * Information about pagination in a connection.
-   */
-  pageInfo?: Maybe<WPPageInfo>;
-}
-
-/**
- * An edge in a connection
- */
-export interface ContentNodeToEnqueuedStylesheetConnectionEdge {
-  __typename?: "ContentNodeToEnqueuedStylesheetConnectionEdge";
-  /**
-   * A cursor for use in pagination
-   */
-  cursor?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The item at the end of the edge
-   */
-  node?: Maybe<EnqueuedStylesheet>;
-}
-
-/**
- * Connection between the ContentNode type and the User type
- */
-export interface ContentNodeToEditLastConnectionEdge {
-  __typename?: "ContentNodeToEditLastConnectionEdge";
-  /**
-   * The node of the connection, without the edges
-   */
-  node?: Maybe<User>;
-}
-
-/**
  * File details for a Media Item
  */
 export interface MediaDetails {
@@ -12038,6 +13374,221 @@ export interface MediaSize {
    * The width of the referenced size
    */
   width?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Connection between the User type and the outdoorCrag type
+ */
+export interface UserToOutdoorCragConnection {
+  __typename?: "UserToOutdoorCragConnection";
+  /**
+   * Edges for the UserToOutdoorCragConnection connection
+   */
+  edges?: Maybe<Array<Maybe<UserToOutdoorCragConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<OutdoorCrag>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface UserToOutdoorCragConnectionEdge {
+  __typename?: "UserToOutdoorCragConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<OutdoorCrag>;
+}
+
+/**
+ * The outdoorCrag type
+ */
+export interface OutdoorCrag {
+  __typename?: "OutdoorCrag";
+  address?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the NodeWithAuthor type and the User type
+   */
+  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
+  /**
+   * The database identifier of the author of the node
+   */
+  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The globally unique identifier of the author of the node
+   */
+  authorId?: Maybe<ScalarsEnums["ID"]>;
+  conditionalTags?: Maybe<ConditionalTags>;
+  /**
+   * Connection between the ContentNode type and the ContentType type
+   */
+  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
+  cragName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The unique identifier stored in the database
+   */
+  databaseId: ScalarsEnums["Int"];
+  /**
+   * Post publishing date.
+   */
+  date?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The publishing date set in GMT.
+   */
+  dateGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The desired slug of the post
+   */
+  desiredSlug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
+   */
+  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
+  /**
+   * The RSS enclosure for the object
+   */
+  enclosure?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedScript type
+   */
+  enqueuedScripts: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedStylesheet type
+   */
+  enqueuedStylesheets: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
+  /**
+   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
+   */
+  guid?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The globally unique identifier of the outdoorcrag object.
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Whether the node is a Content Node
+   */
+  isContentNode: ScalarsEnums["Boolean"];
+  /**
+   * Whether the object is a node in the preview state
+   */
+  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the object is restricted from the current viewer
+   */
+  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the node is a Term
+   */
+  isTermNode: ScalarsEnums["Boolean"];
+  /**
+   * The user that most recently edited the node
+   */
+  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
+  lat?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * The permalink of the post
+   */
+  link?: Maybe<ScalarsEnums["String"]>;
+  lng?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
+   */
+  modified?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
+   */
+  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of the databaseId field
+   */
+  outdoorCragId: ScalarsEnums["Int"];
+  /**
+   * Connection between the outdoorCrag type and the outdoorCrag type
+   */
+  preview?: Maybe<OutdoorCragToPreviewConnectionEdge>;
+  /**
+   * The database id of the preview node
+   */
+  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Whether the object is a node in the preview state
+   */
+  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
+  routePic?: Maybe<MediaItem>;
+  /**
+   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
+   */
+  slug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The current status of the object
+   */
+  status?: Maybe<ScalarsEnums["String"]>;
+  suggestedRoutes?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The template assigned to the node
+   */
+  template?: Maybe<ContentTemplate>;
+  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * The unique resource identifier path
+   */
+  uri?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Connection between the outdoorCrag type and the outdoorCrag type
+ */
+export interface OutdoorCragToPreviewConnectionEdge {
+  __typename?: "OutdoorCragToPreviewConnectionEdge";
+  /**
+   * The node of the connection, without the edges
+   */
+  node?: Maybe<OutdoorCrag>;
 }
 
 /**
@@ -13877,6 +15428,219 @@ export interface PostToTermNodeConnectionEdge {
 }
 
 /**
+ * Connection between the User type and the proShop type
+ */
+export interface UserToProShopConnection {
+  __typename?: "UserToProShopConnection";
+  /**
+   * Edges for the UserToProShopConnection connection
+   */
+  edges?: Maybe<Array<Maybe<UserToProShopConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<ProShop>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface UserToProShopConnectionEdge {
+  __typename?: "UserToProShopConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<ProShop>;
+}
+
+/**
+ * The proShop type
+ */
+export interface ProShop {
+  __typename?: "ProShop";
+  /**
+   * Connection between the NodeWithAuthor type and the User type
+   */
+  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
+  /**
+   * The database identifier of the author of the node
+   */
+  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The globally unique identifier of the author of the node
+   */
+  authorId?: Maybe<ScalarsEnums["ID"]>;
+  conditionalTags?: Maybe<ConditionalTags>;
+  /**
+   * Connection between the ContentNode type and the ContentType type
+   */
+  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
+  /**
+   * The unique identifier stored in the database
+   */
+  databaseId: ScalarsEnums["Int"];
+  /**
+   * Post publishing date.
+   */
+  date?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The publishing date set in GMT.
+   */
+  dateGmt?: Maybe<ScalarsEnums["String"]>;
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The desired slug of the post
+   */
+  desiredSlug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
+   */
+  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
+  /**
+   * The RSS enclosure for the object
+   */
+  enclosure?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedScript type
+   */
+  enqueuedScripts: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedStylesheet type
+   */
+  enqueuedStylesheets: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
+  /**
+   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
+   */
+  guid?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The globally unique identifier of the proshop object.
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Whether the node is a Content Node
+   */
+  isContentNode: ScalarsEnums["Boolean"];
+  /**
+   * Whether the object is a node in the preview state
+   */
+  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the object is restricted from the current viewer
+   */
+  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the node is a Term
+   */
+  isTermNode: ScalarsEnums["Boolean"];
+  /**
+   * The user that most recently edited the node
+   */
+  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
+  lat?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * The permalink of the post
+   */
+  link?: Maybe<ScalarsEnums["String"]>;
+  lng?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
+   */
+  modified?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
+   */
+  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the proShop type and the proShop type
+   */
+  preview?: Maybe<ProShopToPreviewConnectionEdge>;
+  /**
+   * The database id of the preview node
+   */
+  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Whether the object is a node in the preview state
+   */
+  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of the databaseId field
+   */
+  proShopId: ScalarsEnums["Int"];
+  shopName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
+   */
+  slug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The current status of the object
+   */
+  status?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The template assigned to the node
+   */
+  template?: Maybe<ContentTemplate>;
+  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * The unique resource identifier path
+   */
+  uri?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Connection between the proShop type and the proShop type
+ */
+export interface ProShopToPreviewConnectionEdge {
+  __typename?: "ProShopToPreviewConnectionEdge";
+  /**
+   * The node of the connection, without the edges
+   */
+  node?: Maybe<ProShop>;
+}
+
+/**
  * Connection between the User type and the ContentRevisionUnion type
  */
 export interface UserToContentRevisionUnionConnection {
@@ -14153,172 +15917,6 @@ export interface DiscussionSettings {
 }
 
 /**
- * The formSubmission type
- */
-export interface FormSubmission {
-  __typename?: "FormSubmission";
-  conditionalTags?: Maybe<ConditionalTags>;
-  /**
-   * Connection between the ContentNode type and the ContentType type
-   */
-  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
-  /**
-   * The unique identifier stored in the database
-   */
-  databaseId: ScalarsEnums["Int"];
-  /**
-   * Post publishing date.
-   */
-  date?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The publishing date set in GMT.
-   */
-  dateGmt?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The desired slug of the post
-   */
-  desiredSlug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
-   */
-  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
-  email?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The RSS enclosure for the object
-   */
-  enclosure?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedScript type
-   */
-  enqueuedScripts: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedStylesheet type
-   */
-  enqueuedStylesheets: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
-  /**
-   * The id field matches the WP_Post-&gt;ID field.
-   * @deprecated Deprecated in favor of the databaseId field
-   */
-  formSubmissionId: ScalarsEnums["Int"];
-  /**
-   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
-   */
-  guid?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The globally unique identifier of the formsubmission object.
-   */
-  id: ScalarsEnums["ID"];
-  /**
-   * Whether the node is a Content Node
-   */
-  isContentNode: ScalarsEnums["Boolean"];
-  /**
-   * Whether the object is a node in the preview state
-   */
-  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the object is restricted from the current viewer
-   */
-  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the node is a Term
-   */
-  isTermNode: ScalarsEnums["Boolean"];
-  /**
-   * The user that most recently edited the node
-   */
-  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
-  /**
-   * The permalink of the post
-   */
-  link?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
-   */
-  modified?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
-   */
-  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
-  name?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the formSubmission type and the formSubmission type
-   */
-  preview?: Maybe<FormSubmissionToPreviewConnectionEdge>;
-  /**
-   * The database id of the preview node
-   */
-  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * Whether the object is a node in the preview state
-   */
-  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
-  /**
-   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
-   */
-  slug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The current status of the object
-   */
-  status?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The template assigned to the node
-   */
-  template?: Maybe<ContentTemplate>;
-  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
-  topic?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The unique resource identifier path
-   */
-  uri?: Maybe<ScalarsEnums["String"]>;
-}
-
-/**
- * Connection between the formSubmission type and the formSubmission type
- */
-export interface FormSubmissionToPreviewConnectionEdge {
-  __typename?: "FormSubmissionToPreviewConnectionEdge";
-  /**
-   * The node of the connection, without the edges
-   */
-  node?: Maybe<FormSubmission>;
-}
-
-/**
  * Connection between the RootQuery type and the formSubmission type
  */
 export interface RootQueryToFormSubmissionConnection {
@@ -14396,173 +15994,6 @@ export interface GeneralSettings {
 }
 
 /**
- * The indoorGym type
- */
-export interface IndoorGym {
-  __typename?: "IndoorGym";
-  conditionalTags?: Maybe<ConditionalTags>;
-  /**
-   * Connection between the ContentNode type and the ContentType type
-   */
-  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
-  /**
-   * The unique identifier stored in the database
-   */
-  databaseId: ScalarsEnums["Int"];
-  /**
-   * Post publishing date.
-   */
-  date?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The publishing date set in GMT.
-   */
-  dateGmt?: Maybe<ScalarsEnums["String"]>;
-  description?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The desired slug of the post
-   */
-  desiredSlug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
-   */
-  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
-  /**
-   * The RSS enclosure for the object
-   */
-  enclosure?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedScript type
-   */
-  enqueuedScripts: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedStylesheet type
-   */
-  enqueuedStylesheets: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
-  /**
-   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
-   */
-  guid?: Maybe<ScalarsEnums["String"]>;
-  gymName?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The globally unique identifier of the indoorgym object.
-   */
-  id: ScalarsEnums["ID"];
-  /**
-   * The id field matches the WP_Post-&gt;ID field.
-   * @deprecated Deprecated in favor of the databaseId field
-   */
-  indoorGymId: ScalarsEnums["Int"];
-  /**
-   * Whether the node is a Content Node
-   */
-  isContentNode: ScalarsEnums["Boolean"];
-  /**
-   * Whether the object is a node in the preview state
-   */
-  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the object is restricted from the current viewer
-   */
-  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the node is a Term
-   */
-  isTermNode: ScalarsEnums["Boolean"];
-  /**
-   * The user that most recently edited the node
-   */
-  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
-  lat?: Maybe<ScalarsEnums["Float"]>;
-  /**
-   * The permalink of the post
-   */
-  link?: Maybe<ScalarsEnums["String"]>;
-  lng?: Maybe<ScalarsEnums["Float"]>;
-  /**
-   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
-   */
-  modified?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
-   */
-  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the indoorGym type and the indoorGym type
-   */
-  preview?: Maybe<IndoorGymToPreviewConnectionEdge>;
-  /**
-   * The database id of the preview node
-   */
-  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * Whether the object is a node in the preview state
-   */
-  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
-  /**
-   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
-   */
-  slug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The current status of the object
-   */
-  status?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The template assigned to the node
-   */
-  template?: Maybe<ContentTemplate>;
-  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
-  /**
-   * The unique resource identifier path
-   */
-  uri?: Maybe<ScalarsEnums["String"]>;
-}
-
-/**
- * Connection between the indoorGym type and the indoorGym type
- */
-export interface IndoorGymToPreviewConnectionEdge {
-  __typename?: "IndoorGymToPreviewConnectionEdge";
-  /**
-   * The node of the connection, without the edges
-   */
-  node?: Maybe<IndoorGym>;
-}
-
-/**
  * Connection between the RootQuery type and the indoorGym type
  */
 export interface RootQueryToIndoorGymConnection {
@@ -14594,174 +16025,6 @@ export interface RootQueryToIndoorGymConnectionEdge {
    * The item at the end of the edge
    */
   node?: Maybe<IndoorGym>;
-}
-
-/**
- * The libationFood type
- */
-export interface LibationFood {
-  __typename?: "LibationFood";
-  alcohol?: Maybe<ScalarsEnums["Boolean"]>;
-  conditionalTags?: Maybe<ConditionalTags>;
-  /**
-   * Connection between the ContentNode type and the ContentType type
-   */
-  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
-  /**
-   * The unique identifier stored in the database
-   */
-  databaseId: ScalarsEnums["Int"];
-  /**
-   * Post publishing date.
-   */
-  date?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The publishing date set in GMT.
-   */
-  dateGmt?: Maybe<ScalarsEnums["String"]>;
-  description?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The desired slug of the post
-   */
-  desiredSlug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
-   */
-  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
-  /**
-   * The RSS enclosure for the object
-   */
-  enclosure?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedScript type
-   */
-  enqueuedScripts: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedStylesheet type
-   */
-  enqueuedStylesheets: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
-  /**
-   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
-   */
-  guid?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The globally unique identifier of the libationfood object.
-   */
-  id: ScalarsEnums["ID"];
-  /**
-   * Whether the node is a Content Node
-   */
-  isContentNode: ScalarsEnums["Boolean"];
-  /**
-   * Whether the object is a node in the preview state
-   */
-  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the object is restricted from the current viewer
-   */
-  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the node is a Term
-   */
-  isTermNode: ScalarsEnums["Boolean"];
-  /**
-   * The user that most recently edited the node
-   */
-  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
-  lat?: Maybe<ScalarsEnums["Float"]>;
-  /**
-   * The id field matches the WP_Post-&gt;ID field.
-   * @deprecated Deprecated in favor of the databaseId field
-   */
-  libationFoodId: ScalarsEnums["Int"];
-  /**
-   * The permalink of the post
-   */
-  link?: Maybe<ScalarsEnums["String"]>;
-  lng?: Maybe<ScalarsEnums["Float"]>;
-  /**
-   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
-   */
-  modified?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
-   */
-  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the libationFood type and the libationFood type
-   */
-  preview?: Maybe<LibationFoodToPreviewConnectionEdge>;
-  /**
-   * The database id of the preview node
-   */
-  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * Whether the object is a node in the preview state
-   */
-  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
-  restaurantName?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
-   */
-  slug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The current status of the object
-   */
-  status?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The template assigned to the node
-   */
-  template?: Maybe<ContentTemplate>;
-  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
-  /**
-   * The unique resource identifier path
-   */
-  uri?: Maybe<ScalarsEnums["String"]>;
-}
-
-/**
- * Connection between the libationFood type and the libationFood type
- */
-export interface LibationFoodToPreviewConnectionEdge {
-  __typename?: "LibationFoodToPreviewConnectionEdge";
-  /**
-   * The node of the connection, without the edges
-   */
-  node?: Maybe<LibationFood>;
 }
 
 /**
@@ -15174,175 +16437,6 @@ export interface RootQueryToMenuConnectionEdge {
 }
 
 /**
- * The outdoorCrag type
- */
-export interface OutdoorCrag {
-  __typename?: "OutdoorCrag";
-  address?: Maybe<ScalarsEnums["String"]>;
-  conditionalTags?: Maybe<ConditionalTags>;
-  /**
-   * Connection between the ContentNode type and the ContentType type
-   */
-  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
-  cragName?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The unique identifier stored in the database
-   */
-  databaseId: ScalarsEnums["Int"];
-  /**
-   * Post publishing date.
-   */
-  date?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The publishing date set in GMT.
-   */
-  dateGmt?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The desired slug of the post
-   */
-  desiredSlug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
-   */
-  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
-  /**
-   * The RSS enclosure for the object
-   */
-  enclosure?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedScript type
-   */
-  enqueuedScripts: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedStylesheet type
-   */
-  enqueuedStylesheets: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
-  /**
-   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
-   */
-  guid?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The globally unique identifier of the outdoorcrag object.
-   */
-  id: ScalarsEnums["ID"];
-  /**
-   * Whether the node is a Content Node
-   */
-  isContentNode: ScalarsEnums["Boolean"];
-  /**
-   * Whether the object is a node in the preview state
-   */
-  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the object is restricted from the current viewer
-   */
-  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the node is a Term
-   */
-  isTermNode: ScalarsEnums["Boolean"];
-  /**
-   * The user that most recently edited the node
-   */
-  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
-  lat?: Maybe<ScalarsEnums["Float"]>;
-  /**
-   * The permalink of the post
-   */
-  link?: Maybe<ScalarsEnums["String"]>;
-  lng?: Maybe<ScalarsEnums["Float"]>;
-  /**
-   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
-   */
-  modified?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
-   */
-  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The id field matches the WP_Post-&gt;ID field.
-   * @deprecated Deprecated in favor of the databaseId field
-   */
-  outdoorCragId: ScalarsEnums["Int"];
-  /**
-   * Connection between the outdoorCrag type and the outdoorCrag type
-   */
-  preview?: Maybe<OutdoorCragToPreviewConnectionEdge>;
-  /**
-   * The database id of the preview node
-   */
-  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * Whether the object is a node in the preview state
-   */
-  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
-  routePic?: Maybe<MediaItem>;
-  /**
-   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
-   */
-  slug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The current status of the object
-   */
-  status?: Maybe<ScalarsEnums["String"]>;
-  suggestedRoutes?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The template assigned to the node
-   */
-  template?: Maybe<ContentTemplate>;
-  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
-  /**
-   * The unique resource identifier path
-   */
-  uri?: Maybe<ScalarsEnums["String"]>;
-}
-
-/**
- * Connection between the outdoorCrag type and the outdoorCrag type
- */
-export interface OutdoorCragToPreviewConnectionEdge {
-  __typename?: "OutdoorCragToPreviewConnectionEdge";
-  /**
-   * The node of the connection, without the edges
-   */
-  node?: Maybe<OutdoorCrag>;
-}
-
-/**
  * Connection between the RootQuery type and the outdoorCrag type
  */
 export interface RootQueryToOutdoorCragConnection {
@@ -15553,173 +16647,6 @@ export interface RootQueryToPostConnectionEdge {
    * The item at the end of the edge
    */
   node?: Maybe<Post>;
-}
-
-/**
- * The proShop type
- */
-export interface ProShop {
-  __typename?: "ProShop";
-  conditionalTags?: Maybe<ConditionalTags>;
-  /**
-   * Connection between the ContentNode type and the ContentType type
-   */
-  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
-  /**
-   * The unique identifier stored in the database
-   */
-  databaseId: ScalarsEnums["Int"];
-  /**
-   * Post publishing date.
-   */
-  date?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The publishing date set in GMT.
-   */
-  dateGmt?: Maybe<ScalarsEnums["String"]>;
-  description?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The desired slug of the post
-   */
-  desiredSlug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
-   */
-  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
-  /**
-   * The RSS enclosure for the object
-   */
-  enclosure?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedScript type
-   */
-  enqueuedScripts: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedStylesheet type
-   */
-  enqueuedStylesheets: (args?: {
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */;
-    last?: Maybe<Scalars["Int"]>
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */;
-    after?: Maybe<Scalars["String"]>
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */;
-    before?: Maybe<Scalars["String"]>;
-  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
-  /**
-   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
-   */
-  guid?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The globally unique identifier of the proshop object.
-   */
-  id: ScalarsEnums["ID"];
-  /**
-   * Whether the node is a Content Node
-   */
-  isContentNode: ScalarsEnums["Boolean"];
-  /**
-   * Whether the object is a node in the preview state
-   */
-  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the object is restricted from the current viewer
-   */
-  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the node is a Term
-   */
-  isTermNode: ScalarsEnums["Boolean"];
-  /**
-   * The user that most recently edited the node
-   */
-  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
-  lat?: Maybe<ScalarsEnums["Float"]>;
-  /**
-   * The permalink of the post
-   */
-  link?: Maybe<ScalarsEnums["String"]>;
-  lng?: Maybe<ScalarsEnums["Float"]>;
-  /**
-   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
-   */
-  modified?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
-   */
-  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the proShop type and the proShop type
-   */
-  preview?: Maybe<ProShopToPreviewConnectionEdge>;
-  /**
-   * The database id of the preview node
-   */
-  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * Whether the object is a node in the preview state
-   */
-  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
-  /**
-   * The id field matches the WP_Post-&gt;ID field.
-   * @deprecated Deprecated in favor of the databaseId field
-   */
-  proShopId: ScalarsEnums["Int"];
-  shopName?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
-   */
-  slug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The current status of the object
-   */
-  status?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The template assigned to the node
-   */
-  template?: Maybe<ContentTemplate>;
-  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
-  /**
-   * The unique resource identifier path
-   */
-  uri?: Maybe<ScalarsEnums["String"]>;
-}
-
-/**
- * Connection between the proShop type and the proShop type
- */
-export interface ProShopToPreviewConnectionEdge {
-  __typename?: "ProShopToPreviewConnectionEdge";
-  /**
-   * The node of the connection, without the edges
-   */
-  node?: Maybe<ProShop>;
 }
 
 /**
@@ -17030,10 +17957,27 @@ export interface SchemaObjectTypes {
   UserToEnqueuedScriptConnectionEdge: UserToEnqueuedScriptConnectionEdge;
   UserToEnqueuedStylesheetConnection: UserToEnqueuedStylesheetConnection;
   UserToEnqueuedStylesheetConnectionEdge: UserToEnqueuedStylesheetConnectionEdge;
+  UserToFormSubmissionConnection: UserToFormSubmissionConnection;
+  UserToFormSubmissionConnectionEdge: UserToFormSubmissionConnectionEdge;
+  FormSubmission: FormSubmission;
+  NodeWithAuthorToUserConnectionEdge: NodeWithAuthorToUserConnectionEdge;
+  ContentNodeToEnqueuedScriptConnection: ContentNodeToEnqueuedScriptConnection;
+  ContentNodeToEnqueuedScriptConnectionEdge: ContentNodeToEnqueuedScriptConnectionEdge;
+  ContentNodeToEnqueuedStylesheetConnection: ContentNodeToEnqueuedStylesheetConnection;
+  ContentNodeToEnqueuedStylesheetConnectionEdge: ContentNodeToEnqueuedStylesheetConnectionEdge;
+  ContentNodeToEditLastConnectionEdge: ContentNodeToEditLastConnectionEdge;
+  FormSubmissionToPreviewConnectionEdge: FormSubmissionToPreviewConnectionEdge;
+  UserToIndoorGymConnection: UserToIndoorGymConnection;
+  UserToIndoorGymConnectionEdge: UserToIndoorGymConnectionEdge;
+  IndoorGym: IndoorGym;
+  IndoorGymToPreviewConnectionEdge: IndoorGymToPreviewConnectionEdge;
+  UserToLibationFoodConnection: UserToLibationFoodConnection;
+  UserToLibationFoodConnectionEdge: UserToLibationFoodConnectionEdge;
+  LibationFood: LibationFood;
+  LibationFoodToPreviewConnectionEdge: LibationFoodToPreviewConnectionEdge;
   UserToMediaItemConnection: UserToMediaItemConnection;
   UserToMediaItemConnectionEdge: UserToMediaItemConnectionEdge;
   MediaItem: MediaItem;
-  NodeWithAuthorToUserConnectionEdge: NodeWithAuthorToUserConnectionEdge;
   HierarchicalContentNodeToContentNodeAncestorsConnection: HierarchicalContentNodeToContentNodeAncestorsConnection;
   HierarchicalContentNodeToContentNodeAncestorsConnectionEdge: HierarchicalContentNodeToContentNodeAncestorsConnectionEdge;
   HierarchicalContentNodeToContentNodeChildrenConnection: HierarchicalContentNodeToContentNodeChildrenConnection;
@@ -17041,14 +17985,13 @@ export interface SchemaObjectTypes {
   HierarchicalContentNodeToParentContentNodeConnectionEdge: HierarchicalContentNodeToParentContentNodeConnectionEdge;
   MediaItemToCommentConnection: MediaItemToCommentConnection;
   MediaItemToCommentConnectionEdge: MediaItemToCommentConnectionEdge;
-  ContentNodeToEnqueuedScriptConnection: ContentNodeToEnqueuedScriptConnection;
-  ContentNodeToEnqueuedScriptConnectionEdge: ContentNodeToEnqueuedScriptConnectionEdge;
-  ContentNodeToEnqueuedStylesheetConnection: ContentNodeToEnqueuedStylesheetConnection;
-  ContentNodeToEnqueuedStylesheetConnectionEdge: ContentNodeToEnqueuedStylesheetConnectionEdge;
-  ContentNodeToEditLastConnectionEdge: ContentNodeToEditLastConnectionEdge;
   MediaDetails: MediaDetails;
   MediaItemMeta: MediaItemMeta;
   MediaSize: MediaSize;
+  UserToOutdoorCragConnection: UserToOutdoorCragConnection;
+  UserToOutdoorCragConnectionEdge: UserToOutdoorCragConnectionEdge;
+  OutdoorCrag: OutdoorCrag;
+  OutdoorCragToPreviewConnectionEdge: OutdoorCragToPreviewConnectionEdge;
   UserToPageConnection: UserToPageConnection;
   UserToPageConnectionEdge: UserToPageConnectionEdge;
   Page: Page;
@@ -17087,6 +18030,10 @@ export interface SchemaObjectTypes {
   TagToTaxonomyConnectionEdge: TagToTaxonomyConnectionEdge;
   PostToTermNodeConnection: PostToTermNodeConnection;
   PostToTermNodeConnectionEdge: PostToTermNodeConnectionEdge;
+  UserToProShopConnection: UserToProShopConnection;
+  UserToProShopConnectionEdge: UserToProShopConnectionEdge;
+  ProShop: ProShop;
+  ProShopToPreviewConnectionEdge: ProShopToPreviewConnectionEdge;
   UserToContentRevisionUnionConnection: UserToContentRevisionUnionConnection;
   UserToContentRevisionUnionConnectionEdge: UserToContentRevisionUnionConnectionEdge;
   UserToUserRoleConnection: UserToUserRoleConnection;
@@ -17103,17 +18050,11 @@ export interface SchemaObjectTypes {
   RootQueryToContentTypeConnection: RootQueryToContentTypeConnection;
   RootQueryToContentTypeConnectionEdge: RootQueryToContentTypeConnectionEdge;
   DiscussionSettings: DiscussionSettings;
-  FormSubmission: FormSubmission;
-  FormSubmissionToPreviewConnectionEdge: FormSubmissionToPreviewConnectionEdge;
   RootQueryToFormSubmissionConnection: RootQueryToFormSubmissionConnection;
   RootQueryToFormSubmissionConnectionEdge: RootQueryToFormSubmissionConnectionEdge;
   GeneralSettings: GeneralSettings;
-  IndoorGym: IndoorGym;
-  IndoorGymToPreviewConnectionEdge: IndoorGymToPreviewConnectionEdge;
   RootQueryToIndoorGymConnection: RootQueryToIndoorGymConnection;
   RootQueryToIndoorGymConnectionEdge: RootQueryToIndoorGymConnectionEdge;
-  LibationFood: LibationFood;
-  LibationFoodToPreviewConnectionEdge: LibationFoodToPreviewConnectionEdge;
   RootQueryToLibationFoodConnection: RootQueryToLibationFoodConnection;
   RootQueryToLibationFoodConnectionEdge: RootQueryToLibationFoodConnectionEdge;
   RootQueryToMediaItemConnection: RootQueryToMediaItemConnection;
@@ -17130,8 +18071,6 @@ export interface SchemaObjectTypes {
   RootQueryToMenuItemConnectionEdge: RootQueryToMenuItemConnectionEdge;
   RootQueryToMenuConnection: RootQueryToMenuConnection;
   RootQueryToMenuConnectionEdge: RootQueryToMenuConnectionEdge;
-  OutdoorCrag: OutdoorCrag;
-  OutdoorCragToPreviewConnectionEdge: OutdoorCragToPreviewConnectionEdge;
   RootQueryToOutdoorCragConnection: RootQueryToOutdoorCragConnection;
   RootQueryToOutdoorCragConnectionEdge: RootQueryToOutdoorCragConnectionEdge;
   RootQueryToPageConnection: RootQueryToPageConnection;
@@ -17143,8 +18082,6 @@ export interface SchemaObjectTypes {
   RootQueryToPostFormatConnectionEdge: RootQueryToPostFormatConnectionEdge;
   RootQueryToPostConnection: RootQueryToPostConnection;
   RootQueryToPostConnectionEdge: RootQueryToPostConnectionEdge;
-  ProShop: ProShop;
-  ProShopToPreviewConnectionEdge: ProShopToPreviewConnectionEdge;
   RootQueryToProShopConnection: RootQueryToProShopConnection;
   RootQueryToProShopConnectionEdge: RootQueryToProShopConnectionEdge;
   ReadingSettings: ReadingSettings;
@@ -17265,10 +18202,27 @@ export type SchemaObjectTypesNames =
   | "UserToEnqueuedScriptConnectionEdge"
   | "UserToEnqueuedStylesheetConnection"
   | "UserToEnqueuedStylesheetConnectionEdge"
+  | "UserToFormSubmissionConnection"
+  | "UserToFormSubmissionConnectionEdge"
+  | "FormSubmission"
+  | "NodeWithAuthorToUserConnectionEdge"
+  | "ContentNodeToEnqueuedScriptConnection"
+  | "ContentNodeToEnqueuedScriptConnectionEdge"
+  | "ContentNodeToEnqueuedStylesheetConnection"
+  | "ContentNodeToEnqueuedStylesheetConnectionEdge"
+  | "ContentNodeToEditLastConnectionEdge"
+  | "FormSubmissionToPreviewConnectionEdge"
+  | "UserToIndoorGymConnection"
+  | "UserToIndoorGymConnectionEdge"
+  | "IndoorGym"
+  | "IndoorGymToPreviewConnectionEdge"
+  | "UserToLibationFoodConnection"
+  | "UserToLibationFoodConnectionEdge"
+  | "LibationFood"
+  | "LibationFoodToPreviewConnectionEdge"
   | "UserToMediaItemConnection"
   | "UserToMediaItemConnectionEdge"
   | "MediaItem"
-  | "NodeWithAuthorToUserConnectionEdge"
   | "HierarchicalContentNodeToContentNodeAncestorsConnection"
   | "HierarchicalContentNodeToContentNodeAncestorsConnectionEdge"
   | "HierarchicalContentNodeToContentNodeChildrenConnection"
@@ -17276,14 +18230,13 @@ export type SchemaObjectTypesNames =
   | "HierarchicalContentNodeToParentContentNodeConnectionEdge"
   | "MediaItemToCommentConnection"
   | "MediaItemToCommentConnectionEdge"
-  | "ContentNodeToEnqueuedScriptConnection"
-  | "ContentNodeToEnqueuedScriptConnectionEdge"
-  | "ContentNodeToEnqueuedStylesheetConnection"
-  | "ContentNodeToEnqueuedStylesheetConnectionEdge"
-  | "ContentNodeToEditLastConnectionEdge"
   | "MediaDetails"
   | "MediaItemMeta"
   | "MediaSize"
+  | "UserToOutdoorCragConnection"
+  | "UserToOutdoorCragConnectionEdge"
+  | "OutdoorCrag"
+  | "OutdoorCragToPreviewConnectionEdge"
   | "UserToPageConnection"
   | "UserToPageConnectionEdge"
   | "Page"
@@ -17322,6 +18275,10 @@ export type SchemaObjectTypesNames =
   | "TagToTaxonomyConnectionEdge"
   | "PostToTermNodeConnection"
   | "PostToTermNodeConnectionEdge"
+  | "UserToProShopConnection"
+  | "UserToProShopConnectionEdge"
+  | "ProShop"
+  | "ProShopToPreviewConnectionEdge"
   | "UserToContentRevisionUnionConnection"
   | "UserToContentRevisionUnionConnectionEdge"
   | "UserToUserRoleConnection"
@@ -17338,17 +18295,11 @@ export type SchemaObjectTypesNames =
   | "RootQueryToContentTypeConnection"
   | "RootQueryToContentTypeConnectionEdge"
   | "DiscussionSettings"
-  | "FormSubmission"
-  | "FormSubmissionToPreviewConnectionEdge"
   | "RootQueryToFormSubmissionConnection"
   | "RootQueryToFormSubmissionConnectionEdge"
   | "GeneralSettings"
-  | "IndoorGym"
-  | "IndoorGymToPreviewConnectionEdge"
   | "RootQueryToIndoorGymConnection"
   | "RootQueryToIndoorGymConnectionEdge"
-  | "LibationFood"
-  | "LibationFoodToPreviewConnectionEdge"
   | "RootQueryToLibationFoodConnection"
   | "RootQueryToLibationFoodConnectionEdge"
   | "RootQueryToMediaItemConnection"
@@ -17365,8 +18316,6 @@ export type SchemaObjectTypesNames =
   | "RootQueryToMenuItemConnectionEdge"
   | "RootQueryToMenuConnection"
   | "RootQueryToMenuConnectionEdge"
-  | "OutdoorCrag"
-  | "OutdoorCragToPreviewConnectionEdge"
   | "RootQueryToOutdoorCragConnection"
   | "RootQueryToOutdoorCragConnectionEdge"
   | "RootQueryToPageConnection"
@@ -17378,8 +18327,6 @@ export type SchemaObjectTypesNames =
   | "RootQueryToPostFormatConnectionEdge"
   | "RootQueryToPostConnection"
   | "RootQueryToPostConnectionEdge"
-  | "ProShop"
-  | "ProShopToPreviewConnectionEdge"
   | "RootQueryToProShopConnection"
   | "RootQueryToProShopConnectionEdge"
   | "ReadingSettings"
@@ -17461,20 +18408,20 @@ export interface $Node {
   Taxonomy?: Taxonomy;
   User?: User;
   Comment?: Comment;
+  FormSubmission?: FormSubmission;
+  IndoorGym?: IndoorGym;
+  LibationFood?: LibationFood;
   MediaItem?: MediaItem;
+  OutdoorCrag?: OutdoorCrag;
   Page?: Page;
   Post?: Post;
   PostFormat?: PostFormat;
   Tag?: Tag;
+  ProShop?: ProShop;
   UserRole?: UserRole;
-  FormSubmission?: FormSubmission;
-  IndoorGym?: IndoorGym;
-  LibationFood?: LibationFood;
   Menu?: Menu;
   MenuItem?: MenuItem;
-  OutdoorCrag?: OutdoorCrag;
   Plugin?: Plugin;
-  ProShop?: ProShop;
   Theme?: Theme;
   CommentAuthor?: CommentAuthor;
 }
@@ -17489,15 +18436,15 @@ export interface $UniformResourceIdentifiable {
   Category?: Category;
   ContentType?: ContentType;
   User?: User;
+  FormSubmission?: FormSubmission;
+  IndoorGym?: IndoorGym;
+  LibationFood?: LibationFood;
   MediaItem?: MediaItem;
+  OutdoorCrag?: OutdoorCrag;
   Page?: Page;
   Post?: Post;
   PostFormat?: PostFormat;
   Tag?: Tag;
-  FormSubmission?: FormSubmission;
-  IndoorGym?: IndoorGym;
-  LibationFood?: LibationFood;
-  OutdoorCrag?: OutdoorCrag;
   ProShop?: ProShop;
 }
 
@@ -17505,18 +18452,18 @@ export interface $DatabaseIdentifier {
   Category?: Category;
   User?: User;
   Comment?: Comment;
+  FormSubmission?: FormSubmission;
+  IndoorGym?: IndoorGym;
+  LibationFood?: LibationFood;
   MediaItem?: MediaItem;
+  OutdoorCrag?: OutdoorCrag;
   Page?: Page;
   Post?: Post;
   PostFormat?: PostFormat;
   Tag?: Tag;
-  FormSubmission?: FormSubmission;
-  IndoorGym?: IndoorGym;
-  LibationFood?: LibationFood;
+  ProShop?: ProShop;
   Menu?: Menu;
   MenuItem?: MenuItem;
-  OutdoorCrag?: OutdoorCrag;
-  ProShop?: ProShop;
 }
 
 export interface $HierarchicalTermNode {
@@ -17541,34 +18488,39 @@ export interface $Commenter {
 }
 
 export interface $ContentNode {
-  MediaItem?: MediaItem;
-  Page?: Page;
-  Post?: Post;
   FormSubmission?: FormSubmission;
   IndoorGym?: IndoorGym;
   LibationFood?: LibationFood;
+  MediaItem?: MediaItem;
   OutdoorCrag?: OutdoorCrag;
+  Page?: Page;
+  Post?: Post;
   ProShop?: ProShop;
 }
 
 export interface $NodeWithTemplate {
-  MediaItem?: MediaItem;
-  Page?: Page;
-  Post?: Post;
   FormSubmission?: FormSubmission;
   IndoorGym?: IndoorGym;
   LibationFood?: LibationFood;
+  MediaItem?: MediaItem;
   OutdoorCrag?: OutdoorCrag;
+  Page?: Page;
+  Post?: Post;
+  ProShop?: ProShop;
+}
+
+export interface $NodeWithAuthor {
+  FormSubmission?: FormSubmission;
+  IndoorGym?: IndoorGym;
+  LibationFood?: LibationFood;
+  MediaItem?: MediaItem;
+  OutdoorCrag?: OutdoorCrag;
+  Page?: Page;
+  Post?: Post;
   ProShop?: ProShop;
 }
 
 export interface $NodeWithTitle {
-  MediaItem?: MediaItem;
-  Page?: Page;
-  Post?: Post;
-}
-
-export interface $NodeWithAuthor {
   MediaItem?: MediaItem;
   Page?: Page;
   Post?: Post;

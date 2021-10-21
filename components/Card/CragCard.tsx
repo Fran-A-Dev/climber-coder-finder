@@ -1,12 +1,14 @@
 import { MediaItem } from "@faustjs/core";
 import { OutdoorCrag } from "client";
+import { MouseEventHandler } from "react";
 import styles from "./Card.module.css";
 
 export interface CardProps {
   outdoorCrag: OutdoorCrag;
+  onCardClose: MouseEventHandler<HTMLDivElement>;
 }
 
-function Card({ outdoorCrag }: CardProps) {
+function Card({ outdoorCrag, onCardClose }: CardProps) {
   if (outdoorCrag == undefined) {
     return null;
   }
@@ -14,6 +16,9 @@ function Card({ outdoorCrag }: CardProps) {
   return (
     <div className={styles.card}>
       <div className="cragname">
+        <div onClick={onCardClose} className={styles.close}>
+          Close ✖️
+        </div>
         <span dangerouslySetInnerHTML={{ __html: outdoorCrag?.cragName }} />
         <span
           dangerouslySetInnerHTML={{ __html: outdoorCrag?.suggestedRoutes }}

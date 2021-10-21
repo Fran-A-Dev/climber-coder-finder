@@ -31,6 +31,7 @@ export default function Page() {
 
   const [isCardToggled, setIsCardToggled] = useState(false);
   const [selectedCrag, setSelectedCrag] = useState<OutdoorCrag>(undefined);
+  const [selectedPosition, setSelectedPosition] = useState();
   const [selectedProShop, setSelectedProShop] = useState<ProShop>(undefined);
   const [selectedLibationFood, setSelectedLibationFood] =
     useState<LibationFood>(undefined);
@@ -46,26 +47,31 @@ export default function Page() {
 
   const onCragMarkerClick = (outdoorCrag: OutdoorCrag) => {
     resetCards();
-    setIsCardToggled(!isCardToggled);
+    setIsCardToggled(true);
     setSelectedCrag(outdoorCrag);
   };
 
   const onProShopMarkerClick = (proShop: ProShop) => {
     resetCards();
-    setIsCardToggled(!isCardToggled);
+    setIsCardToggled(true);
     setSelectedProShop(proShop);
   };
 
   const onLibationFoodMarkerClick = (libationFood: LibationFood) => {
     resetCards();
-    setIsCardToggled(!isCardToggled);
+    setIsCardToggled(true);
     setSelectedLibationFood(libationFood);
   };
 
   const onIndoorGymMarkerClick = (indoorGym: IndoorGym) => {
     resetCards();
-    setIsCardToggled(!isCardToggled);
+    setIsCardToggled(true);
     setSelectedIndoorGym(indoorGym);
+  };
+
+  const onCardClose = () => {
+    resetCards();
+    setIsCardToggled(false);
   };
 
   return (
@@ -110,10 +116,22 @@ export default function Page() {
 
       {isCardToggled === true && (
         <>
-          <CragCard outdoorCrag={selectedCrag} />
-          <ProShopCard proShop={selectedProShop} />
-          <LibationsFoodCard libationFood={selectedLibationFood} />
-          <IndoorGymCard indoorGym={selectedIndoorGym} />
+          <CragCard
+            outdoorCrag={selectedCrag}
+            onCardClose={(e) => onCardClose()}
+          />
+          <ProShopCard
+            proShop={selectedProShop}
+            onCardClose={(e) => onCardClose()}
+          />
+          <LibationsFoodCard
+            libationFood={selectedLibationFood}
+            onCardClose={(e) => onCardClose()}
+          />
+          <IndoorGymCard
+            indoorGym={selectedIndoorGym}
+            onCardClose={(e) => onCardClose()}
+          />
         </>
       )}
 
@@ -126,4 +144,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     Page: Page,
     client,
   });
+}
+function position() {
+  throw new Error("Function not implemented.");
 }
