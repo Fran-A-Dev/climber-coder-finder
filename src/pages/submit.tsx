@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./../../styles/FormSubmit.module.css";
 
 import { client } from "../client";
+import { useRouter } from "next/dist/client/router";
 
 export interface FormData {
   name: string;
@@ -55,6 +56,8 @@ export default function Form() {
     setTopic("");
     setEmail("");
   }, [data]);
+
+  const router = useRouter();
 
   return (
     <>
@@ -112,6 +115,15 @@ export default function Form() {
               </button>
             </div>
           </form>
+        </div>
+        <div className={styles.center}>
+          <button
+            className={styles.backbutton}
+            type="button"
+            onClick={() => router.push("/index")}
+          >
+            Click To Go Back
+          </button>
         </div>
       </main>
     </>

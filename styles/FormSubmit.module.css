@@ -45,3 +45,17 @@
   flex-direction: column;
   margin-bottom: 2rem;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding-bottom: 20px;
+}
+
+.backbutton {
+  font-size: large;
+  cursor: pointer;
+  background-color: rgb(219, 219, 219);
+}
