@@ -3,6 +3,7 @@ import styles from "./../../styles/FormSubmit.module.css";
 
 import { client } from "../client";
 import { useRouter } from "next/dist/client/router";
+import Link from "next/link";
 
 export interface FormData {
   name: string;
@@ -116,15 +117,13 @@ export default function Form() {
             </div>
           </form>
         </div>
-        <div className={styles.center}>
-          <button
-            className={styles.backbutton}
-            type="button"
-            onClick={() => router.push("/index")}
-          >
-            Click To Go Back
-          </button>
-        </div>
+        <Link href="/">
+          <a className={styles.center}>
+            <button className={styles.backbutton} type="button">
+              Back To Map
+            </button>
+          </a>
+        </Link>
       </main>
     </>
   );
