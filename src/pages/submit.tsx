@@ -3,6 +3,8 @@ import styles from "./../../styles/FormSubmit.module.css";
 
 import { client } from "../client";
 
+import Link from "next/link";
+
 export interface FormData {
   name: string;
   email: string;
@@ -113,6 +115,13 @@ export default function Form() {
             </div>
           </form>
         </div>
+        <Link href="/">
+          <a className={styles.center}>
+            <button className={styles.backbutton} type="button">
+              Back To Map
+            </button>
+          </a>
+        </Link>
       </main>
     </>
   );
