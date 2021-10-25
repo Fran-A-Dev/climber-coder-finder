@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./../../styles/FormSubmit.module.css";
 
 import { client } from "../client";
-import { useRouter } from "next/dist/client/router";
+
 import Link from "next/link";
 
 export interface FormData {
@@ -57,8 +57,6 @@ export default function Form() {
     setTopic("");
     setEmail("");
   }, [data]);
-
-  const router = useRouter();
 
   return (
     <>
