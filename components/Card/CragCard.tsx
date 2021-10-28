@@ -1,4 +1,3 @@
-import { MediaItem } from "@faustjs/core";
 import { OutdoorCrag } from "client";
 import { MouseEventHandler } from "react";
 import styles from "./Card.module.css";
