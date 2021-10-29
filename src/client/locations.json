@@ -1,0 +1,18 @@
+[
+  {
+    "city": "Austin",
+    "state": "Texas"
+  },
+  {
+    "city": "Slade",
+    "state": "Kentucky"
+  },
+
+  {
+    "city": "Malibu",
+    "state": "California"
+  },
+
+  { "city": "San Antonio", "state": "Texas" },
+  { "city": "Georgetown", "state": "Texas" }
+]

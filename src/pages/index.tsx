@@ -1,4 +1,5 @@
 import { getNextStaticProps } from "@faustjs/next";
+
 import GoogleMapReact from "google-map-react";
 import { GetStaticPropsContext } from "next";
 import React from "react";
