@@ -32,7 +32,12 @@ function Search({}: SearchProps) {
           const { city, state } = location;
           return (
             <div>
-              {city},{state}
+              <li>
+                <strong>City: </strong> {city}
+              </li>
+              <li>
+                <strong>State: </strong> {state}
+              </li>
             </div>
           );
         })}
