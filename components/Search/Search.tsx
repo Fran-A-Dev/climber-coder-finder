@@ -1,7 +1,7 @@
 import Fuse from "fuse.js";
 import { EventHandler, useState } from "react";
 import locations from "client/locations.json";
-
+import styles from "./Search.module.css";
 export interface SearchProps {}
 
 function Search({}: SearchProps) {
@@ -17,32 +17,44 @@ function Search({}: SearchProps) {
 
   console.log(results);
 
+  const onSearchResultClick = (e) => {
+    console.log(e);
+    setQuery("");
+  };
+
   function onSearch({ currentTarget }) {
     setQuery(currentTarget.value);
   }
 
   return (
-    <>
+    <div className={styles["search-form"]}>
       <form className="search">
-        <label>Search City or State</label>
-        <input type="text" value={query} onChange={onSearch}></input>
+        <input
+          placeholder="Search City or State"
+          type="text"
+          value={query}
+          onChange={onSearch}
+        ></input>
       </form>
-      <ul className="locations">
-        {locationResults.map((location) => {
-          const { city, state } = location;
-          return (
-            <div>
-              <li>
-                <strong>City: </strong> {city}
-              </li>
-              <li>
-                <strong>State: </strong> {state}
-              </li>
-            </div>
-          );
-        })}
-      </ul>
-    </>
+
+      {locationResults.length > 0 && (
+        <ul className="locations">
+          {locationResults.map((location) => {
+            const { city, state } = location;
+            return (
+              <div onClick={onSearchResultClick}>
+                <li>
+                  <strong>City: </strong> {city}
+                </li>
+                <li>
+                  <strong>State: </strong> {state}
+                </li>
+              </div>
+            );
+          })}
+        </ul>
+      )}
+    </div>
   );
 }
 

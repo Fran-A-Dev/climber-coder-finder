@@ -22,6 +22,7 @@ import LibationsFoodCard from "../../components/Card/LibationsFoodCard";
 import IndoorGymMarker from "../../components/Marker/IndoorGymMarker";
 import IndoorGymCard from "../../components/Card/IndoorGymCard";
 import CreateMarker from "../../components/CreateMarker/CreateMarker";
+import Search from "../../components/Search/Search";
 
 export default function Page() {
   const { useQuery } = client;
@@ -38,6 +39,8 @@ export default function Page() {
     useState<LibationFood>(undefined);
   const [selectedIndoorGym, setSelectedIndoorGym] =
     useState<IndoorGym>(undefined);
+
+  const [mapLocation, setMapLocation] = useState();
 
   const resetCards = () => {
     setSelectedCrag(undefined);
@@ -77,6 +80,9 @@ export default function Page() {
 
   return (
     <>
+      <div>
+        <Search />
+      </div>
       <Map>
         {outdoorCrags.map((outdoorCrag, index) => (
           <CragMarker

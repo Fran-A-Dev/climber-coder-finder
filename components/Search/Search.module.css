@@ -1,0 +1,9 @@
+.search-form {
+  position: fixed;
+  z-index: 90;
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  top: 0.5rem;
+  left: 0.5rem;
+}

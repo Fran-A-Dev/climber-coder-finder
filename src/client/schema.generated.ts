@@ -539,6 +539,8 @@ export enum ContentTypeEnum {
   POST = "POST",
   /** The Type of Content object */
   PROSHOP = "PROSHOP",
+  /** The Type of Content object */
+  RABBIT = "RABBIT",
 }
 
 /** What rating to display avatars up to. Accepts 'G', 'PG', 'R', 'X', and are judged in that order. Default is the value of the 'avatar_rating' option */
@@ -1983,6 +1985,52 @@ export interface UserToProShopConnectionWhereArgs {
   title?: Maybe<Scalars["String"]>;
 }
 
+/** Arguments for filtering the UserToRabbitConnection connection */
+export interface UserToRabbitConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: Maybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: Maybe<Scalars["Boolean"]>;
+  /** Specific ID of the object */
+  id?: Maybe<Scalars["Int"]>;
+  /** Array of IDs for the objects to retrieve */
+  in?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: Maybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: Maybe<Scalars["String"]>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: Maybe<Array<Maybe<Scalars["String"]>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** What paramater to use to order the objects by. */
+  orderby?: Maybe<Array<Maybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: Maybe<Scalars["ID"]>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Show posts with a specific password. */
+  password?: Maybe<Scalars["String"]>;
+  /** Show Posts based on a keyword search */
+  search?: Maybe<Scalars["String"]>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: Maybe<Array<Maybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: Maybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: Maybe<Scalars["String"]>;
+}
+
 /** Arguments for filtering the UserToContentRevisionUnionConnection connection */
 export interface UserToContentRevisionUnionConnectionWhereArgs {
   /** The Types of content to filter */
@@ -2837,6 +2885,64 @@ export interface RootQueryToProShopConnectionWhereArgs {
   title?: Maybe<Scalars["String"]>;
 }
 
+/** The Type of Identifier used to fetch a single resource. Default is ID. */
+export enum RabbitIdType {
+  /** Identify a resource by the Database ID. */
+  DATABASE_ID = "DATABASE_ID",
+  /** Identify a resource by the (hashed) Global ID. */
+  ID = "ID",
+  /** Identify a resource by the slug. Available to non-hierarchcial Types where the slug is a unique identifier. */
+  SLUG = "SLUG",
+  /** Identify a resource by the URI. */
+  URI = "URI",
+}
+
+/** Arguments for filtering the RootQueryToRabbitConnection connection */
+export interface RootQueryToRabbitConnectionWhereArgs {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: Maybe<Scalars["Int"]>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: Maybe<Scalars["String"]>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: Maybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: Maybe<Scalars["Boolean"]>;
+  /** Specific ID of the object */
+  id?: Maybe<Scalars["Int"]>;
+  /** Array of IDs for the objects to retrieve */
+  in?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: Maybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: Maybe<Scalars["String"]>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: Maybe<Array<Maybe<Scalars["String"]>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** What paramater to use to order the objects by. */
+  orderby?: Maybe<Array<Maybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: Maybe<Scalars["ID"]>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: Maybe<Array<Maybe<Scalars["ID"]>>>;
+  /** Show posts with a specific password. */
+  password?: Maybe<Scalars["String"]>;
+  /** Show Posts based on a keyword search */
+  search?: Maybe<Scalars["String"]>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: Maybe<Array<Maybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: Maybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: Maybe<Scalars["String"]>;
+}
+
 /** Arguments for filtering the RootQueryToContentRevisionUnionConnection connection */
 export interface RootQueryToContentRevisionUnionConnectionWhereArgs {
   /** The Types of content to filter */
@@ -3425,6 +3531,24 @@ export interface CreateProShopInput {
   status?: Maybe<PostStatusEnum>;
 }
 
+/** Input for the createRabbit mutation */
+export interface CreateRabbitInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars["String"]>;
+  /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
+  date?: Maybe<Scalars["String"]>;
+  /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
+  menuOrder?: Maybe<Scalars["Int"]>;
+  /** The password used to protect the content of the object */
+  password?: Maybe<Scalars["String"]>;
+  /** The slug of the object */
+  slug?: Maybe<Scalars["String"]>;
+  /** The status of the object */
+  status?: Maybe<PostStatusEnum>;
+}
+
 /** Input for the createTag mutation */
 export interface CreateTagInput {
   /** The slug that the post_tag will be an alias of */
@@ -3582,6 +3706,16 @@ export interface DeleteProShopInput {
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<Scalars["Boolean"]>;
   /** The ID of the proShop to delete */
+  id: Scalars["ID"];
+}
+
+/** Input for the deleteRabbit mutation */
+export interface DeleteRabbitInput {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars["String"]>;
+  /** Whether the object should be force deleted instead of being moved to the trash */
+  forceDelete?: Maybe<Scalars["Boolean"]>;
+  /** The ID of the rabbit to delete */
   id: Scalars["ID"];
 }
 
@@ -3959,6 +4093,26 @@ export interface UpdateProShopInput {
   status?: Maybe<PostStatusEnum>;
 }
 
+/** Input for the updateRabbit mutation */
+export interface UpdateRabbitInput {
+  /** The userId to assign as the author of the object */
+  authorId?: Maybe<Scalars["ID"]>;
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars["String"]>;
+  /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
+  date?: Maybe<Scalars["String"]>;
+  /** The ID of the rabbit object */
+  id: Scalars["ID"];
+  /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
+  menuOrder?: Maybe<Scalars["Int"]>;
+  /** The password used to protect the content of the object */
+  password?: Maybe<Scalars["String"]>;
+  /** The slug of the object */
+  slug?: Maybe<Scalars["String"]>;
+  /** The status of the object */
+  status?: Maybe<PostStatusEnum>;
+}
+
 /** Input for the updateSettings mutation */
 export interface UpdateSettingsInput {
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
@@ -4088,6 +4242,7 @@ export const scalarsEnumsHash: import("gqty").ScalarsEnumsHash = {
   PostIdType: true,
   PostFormatIdType: true,
   ProShopIdType: true,
+  RabbitIdType: true,
   TagIdType: true,
   TaxonomyIdTypeEnum: true,
   TermNodeIdTypeEnum: true,
@@ -4365,6 +4520,24 @@ export const generatedSchema = {
         where: "RootQueryToProShopConnectionWhereArgs",
       },
     },
+    rabbit: {
+      __type: "Rabbit",
+      __args: { id: "ID!", idType: "RabbitIdType", asPreview: "Boolean" },
+    },
+    rabbitBy: {
+      __type: "Rabbit",
+      __args: { id: "ID", rabbitId: "Int", uri: "String", slug: "String" },
+    },
+    rabbits: {
+      __type: "RootQueryToRabbitConnection",
+      __args: {
+        first: "Int",
+        last: "Int",
+        after: "String",
+        before: "String",
+        where: "RootQueryToRabbitConnectionWhereArgs",
+      },
+    },
     readingSettings: { __type: "ReadingSettings" },
     registeredScripts: {
       __type: "RootQueryToEnqueuedScriptConnection",
@@ -4494,6 +4667,10 @@ export const generatedSchema = {
       __type: "CreateProShopPayload",
       __args: { input: "CreateProShopInput!" },
     },
+    createRabbit: {
+      __type: "CreateRabbitPayload",
+      __args: { input: "CreateRabbitInput!" },
+    },
     createTag: {
       __type: "CreateTagPayload",
       __args: { input: "CreateTagInput!" },
@@ -4545,6 +4722,10 @@ export const generatedSchema = {
     deleteProShop: {
       __type: "DeleteProShopPayload",
       __args: { input: "DeleteProShopInput!" },
+    },
+    deleteRabbit: {
+      __type: "DeleteRabbitPayload",
+      __args: { input: "DeleteRabbitInput!" },
     },
     deleteTag: {
       __type: "DeleteTagPayload",
@@ -4622,6 +4803,10 @@ export const generatedSchema = {
     updateProShop: {
       __type: "UpdateProShopPayload",
       __args: { input: "UpdateProShopInput!" },
+    },
+    updateRabbit: {
+      __type: "UpdateRabbitPayload",
+      __args: { input: "UpdateRabbitInput!" },
     },
     updateSettings: {
       __type: "UpdateSettingsPayload",
@@ -5322,6 +5507,16 @@ export const generatedSchema = {
         after: "String",
         before: "String",
         where: "UserToProShopConnectionWhereArgs",
+      },
+    },
+    rabbits: {
+      __type: "UserToRabbitConnection",
+      __args: {
+        first: "Int",
+        last: "Int",
+        after: "String",
+        before: "String",
+        where: "UserToRabbitConnectionWhereArgs",
       },
     },
     registeredDate: { __type: "String" },
@@ -7295,6 +7490,85 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     node: { __type: "ProShop" },
   },
+  UserToRabbitConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
+    dateQuery: { __type: "DateQueryInput" },
+    hasPassword: { __type: "Boolean" },
+    id: { __type: "Int" },
+    in: { __type: "[ID]" },
+    mimeType: { __type: "MimeTypeEnum" },
+    name: { __type: "String" },
+    nameIn: { __type: "[String]" },
+    notIn: { __type: "[ID]" },
+    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
+    parent: { __type: "ID" },
+    parentIn: { __type: "[ID]" },
+    parentNotIn: { __type: "[ID]" },
+    password: { __type: "String" },
+    search: { __type: "String" },
+    stati: { __type: "[PostStatusEnum]" },
+    status: { __type: "PostStatusEnum" },
+    title: { __type: "String" },
+  },
+  UserToRabbitConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[UserToRabbitConnectionEdge]" },
+    nodes: { __type: "[Rabbit]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  UserToRabbitConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "Rabbit" },
+  },
+  Rabbit: {
+    __typename: { __type: "String!" },
+    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
+    authorDatabaseId: { __type: "Int" },
+    authorId: { __type: "ID" },
+    conditionalTags: { __type: "ConditionalTags" },
+    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
+    databaseId: { __type: "Int!" },
+    date: { __type: "String" },
+    dateGmt: { __type: "String" },
+    desiredSlug: { __type: "String" },
+    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
+    enclosure: { __type: "String" },
+    enqueuedScripts: {
+      __type: "ContentNodeToEnqueuedScriptConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    enqueuedStylesheets: {
+      __type: "ContentNodeToEnqueuedStylesheetConnection",
+      __args: { first: "Int", last: "Int", after: "String", before: "String" },
+    },
+    guid: { __type: "String" },
+    id: { __type: "ID!" },
+    isContentNode: { __type: "Boolean!" },
+    isPreview: { __type: "Boolean" },
+    isRestricted: { __type: "Boolean" },
+    isTermNode: { __type: "Boolean!" },
+    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
+    link: { __type: "String" },
+    modified: { __type: "String" },
+    modifiedGmt: { __type: "String" },
+    preview: { __type: "RabbitToPreviewConnectionEdge" },
+    previewRevisionDatabaseId: { __type: "Int" },
+    previewRevisionId: { __type: "ID" },
+    rabbitId: { __type: "Int!" },
+    slug: { __type: "String" },
+    status: { __type: "String" },
+    template: { __type: "ContentTemplate" },
+    templates: { __type: "[String]" },
+    uri: { __type: "String" },
+  },
+  RabbitToPreviewConnectionEdge: {
+    __typename: { __type: "String!" },
+    node: { __type: "Rabbit" },
+  },
   UserToContentRevisionUnionConnectionWhereArgs: {
     contentTypes: { __type: "[ContentTypeEnum]" },
     dateQuery: { __type: "DateQueryInput" },
@@ -7972,6 +8246,40 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "ProShop" },
   },
+  RootQueryToRabbitConnectionWhereArgs: {
+    author: { __type: "Int" },
+    authorIn: { __type: "[ID]" },
+    authorName: { __type: "String" },
+    authorNotIn: { __type: "[ID]" },
+    dateQuery: { __type: "DateQueryInput" },
+    hasPassword: { __type: "Boolean" },
+    id: { __type: "Int" },
+    in: { __type: "[ID]" },
+    mimeType: { __type: "MimeTypeEnum" },
+    name: { __type: "String" },
+    nameIn: { __type: "[String]" },
+    notIn: { __type: "[ID]" },
+    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
+    parent: { __type: "ID" },
+    parentIn: { __type: "[ID]" },
+    parentNotIn: { __type: "[ID]" },
+    password: { __type: "String" },
+    search: { __type: "String" },
+    stati: { __type: "[PostStatusEnum]" },
+    status: { __type: "PostStatusEnum" },
+    title: { __type: "String" },
+  },
+  RootQueryToRabbitConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[RootQueryToRabbitConnectionEdge]" },
+    nodes: { __type: "[Rabbit]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  RootQueryToRabbitConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "Rabbit" },
+  },
   ReadingSettings: {
     __typename: { __type: "String!" },
     postsPerPage: { __type: "Int" },
@@ -8389,6 +8697,20 @@ export const generatedSchema = {
     clientMutationId: { __type: "String" },
     proShop: { __type: "ProShop" },
   },
+  CreateRabbitInput: {
+    authorId: { __type: "ID" },
+    clientMutationId: { __type: "String" },
+    date: { __type: "String" },
+    menuOrder: { __type: "Int" },
+    password: { __type: "String" },
+    slug: { __type: "String" },
+    status: { __type: "PostStatusEnum" },
+  },
+  CreateRabbitPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    rabbit: { __type: "Rabbit" },
+  },
   CreateTagInput: {
     aliasOf: { __type: "String" },
     clientMutationId: { __type: "String" },
@@ -8544,6 +8866,17 @@ export const generatedSchema = {
     clientMutationId: { __type: "String" },
     deletedId: { __type: "ID" },
     proShop: { __type: "ProShop" },
+  },
+  DeleteRabbitInput: {
+    clientMutationId: { __type: "String" },
+    forceDelete: { __type: "Boolean" },
+    id: { __type: "ID!" },
+  },
+  DeleteRabbitPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    deletedId: { __type: "ID" },
+    rabbit: { __type: "Rabbit" },
   },
   DeleteTagInput: {
     clientMutationId: { __type: "String" },
@@ -8836,6 +9169,21 @@ export const generatedSchema = {
     clientMutationId: { __type: "String" },
     proShop: { __type: "ProShop" },
   },
+  UpdateRabbitInput: {
+    authorId: { __type: "ID" },
+    clientMutationId: { __type: "String" },
+    date: { __type: "String" },
+    id: { __type: "ID!" },
+    menuOrder: { __type: "Int" },
+    password: { __type: "String" },
+    slug: { __type: "String" },
+    status: { __type: "PostStatusEnum" },
+  },
+  UpdateRabbitPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    rabbit: { __type: "Rabbit" },
+  },
   UpdateSettingsInput: {
     clientMutationId: { __type: "String" },
     discussionSettingsDefaultCommentStatus: { __type: "String" },
@@ -8937,6 +9285,7 @@ export const generatedSchema = {
       "PostFormat",
       "Tag",
       "ProShop",
+      "Rabbit",
       "UserRole",
       "Menu",
       "MenuItem",
@@ -8959,6 +9308,7 @@ export const generatedSchema = {
       "PostFormat",
       "Tag",
       "ProShop",
+      "Rabbit",
     ],
     DatabaseIdentifier: [
       "Category",
@@ -8974,6 +9324,7 @@ export const generatedSchema = {
       "PostFormat",
       "Tag",
       "ProShop",
+      "Rabbit",
       "Menu",
       "MenuItem",
     ],
@@ -8990,6 +9341,7 @@ export const generatedSchema = {
       "Page",
       "Post",
       "ProShop",
+      "Rabbit",
     ],
     NodeWithTemplate: [
       "FormSubmission",
@@ -9000,6 +9352,7 @@ export const generatedSchema = {
       "Page",
       "Post",
       "ProShop",
+      "Rabbit",
     ],
     NodeWithAuthor: [
       "FormSubmission",
@@ -9010,6 +9363,7 @@ export const generatedSchema = {
       "Page",
       "Post",
       "ProShop",
+      "Rabbit",
     ],
     NodeWithTitle: ["MediaItem", "Page", "Post"],
     NodeWithComments: ["MediaItem", "Page", "Post"],
@@ -9260,6 +9614,24 @@ export interface Query {
     before?: Maybe<Scalars["String"]>;
     where?: Maybe<RootQueryToProShopConnectionWhereArgs>;
   }) => Maybe<RootQueryToProShopConnection>;
+  rabbit: (args: {
+    id: Scalars["ID"];
+    idType?: Maybe<RabbitIdType>;
+    asPreview?: Maybe<Scalars["Boolean"]>;
+  }) => Maybe<Rabbit>;
+  rabbitBy: (args?: {
+    id?: Maybe<Scalars["ID"]>;
+    rabbitId?: Maybe<Scalars["Int"]>;
+    uri?: Maybe<Scalars["String"]>;
+    slug?: Maybe<Scalars["String"]>;
+  }) => Maybe<Rabbit>;
+  rabbits: (args?: {
+    first?: Maybe<Scalars["Int"]>;
+    last?: Maybe<Scalars["Int"]>;
+    after?: Maybe<Scalars["String"]>;
+    before?: Maybe<Scalars["String"]>;
+    where?: Maybe<RootQueryToRabbitConnectionWhereArgs>;
+  }) => Maybe<RootQueryToRabbitConnection>;
   readingSettings?: Maybe<ReadingSettings>;
   registeredScripts: (args?: {
     first?: Maybe<Scalars["Int"]>;
@@ -9370,6 +9742,9 @@ export interface Mutation {
   createProShop: (args: {
     input: CreateProShopInput;
   }) => Maybe<CreateProShopPayload>;
+  createRabbit: (args: {
+    input: CreateRabbitInput;
+  }) => Maybe<CreateRabbitPayload>;
   createTag: (args: { input: CreateTagInput }) => Maybe<CreateTagPayload>;
   createUser: (args: { input: CreateUserInput }) => Maybe<CreateUserPayload>;
   deleteCategory: (args: {
@@ -9401,6 +9776,9 @@ export interface Mutation {
   deleteProShop: (args: {
     input: DeleteProShopInput;
   }) => Maybe<DeleteProShopPayload>;
+  deleteRabbit: (args: {
+    input: DeleteRabbitInput;
+  }) => Maybe<DeleteRabbitPayload>;
   deleteTag: (args: { input: DeleteTagInput }) => Maybe<DeleteTagPayload>;
   deleteUser: (args: { input: DeleteUserInput }) => Maybe<DeleteUserPayload>;
   generateAuthorizationCode: (args: {
@@ -9453,6 +9831,9 @@ export interface Mutation {
   updateProShop: (args: {
     input: UpdateProShopInput;
   }) => Maybe<UpdateProShopPayload>;
+  updateRabbit: (args: {
+    input: UpdateRabbitInput;
+  }) => Maybe<UpdateRabbitPayload>;
   updateSettings: (args: {
     input: UpdateSettingsInput;
   }) => Maybe<UpdateSettingsPayload>;
@@ -9807,6 +10188,7 @@ export interface Node {
     | "PostFormat"
     | "Tag"
     | "ProShop"
+    | "Rabbit"
     | "UserRole"
     | "Menu"
     | "MenuItem"
@@ -9941,7 +10323,8 @@ export interface UniformResourceIdentifiable {
     | "Post"
     | "PostFormat"
     | "Tag"
-    | "ProShop";
+    | "ProShop"
+    | "Rabbit";
   conditionalTags?: Maybe<ConditionalTags>;
   /**
    * The unique resource identifier path
@@ -10273,6 +10656,7 @@ export interface DatabaseIdentifier {
     | "PostFormat"
     | "Tag"
     | "ProShop"
+    | "Rabbit"
     | "Menu"
     | "MenuItem";
   /**
@@ -10432,7 +10816,8 @@ export interface ContentNode {
     | "OutdoorCrag"
     | "Page"
     | "Post"
-    | "ProShop";
+    | "ProShop"
+    | "Rabbit";
   conditionalTags?: Maybe<ConditionalTags>;
   /**
    * Connection between the ContentNode type and the ContentType type
@@ -11442,6 +11827,31 @@ export interface User {
     where?: Maybe<UserToProShopConnectionWhereArgs>;
   }) => Maybe<UserToProShopConnection>;
   /**
+   * Connection between the User type and the rabbit type
+   */
+  rabbits: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>
+    /**
+     * Arguments for filtering the connection
+     */;
+    where?: Maybe<UserToRabbitConnectionWhereArgs>;
+  }) => Maybe<UserToRabbitConnection>;
+  /**
    * The date the user registered or was created. The field follows a full ISO8601 date string format.
    */
   registeredDate?: Maybe<ScalarsEnums["String"]>;
@@ -12091,7 +12501,8 @@ export interface NodeWithTemplate {
     | "OutdoorCrag"
     | "Page"
     | "Post"
-    | "ProShop";
+    | "ProShop"
+    | "Rabbit";
   /**
    * The template assigned to the node
    */
@@ -12123,7 +12534,8 @@ export interface NodeWithAuthor {
     | "OutdoorCrag"
     | "Page"
     | "Post"
-    | "ProShop";
+    | "ProShop"
+    | "Rabbit";
   /**
    * Connection between the NodeWithAuthor type and the User type
    */
@@ -15641,6 +16053,215 @@ export interface ProShopToPreviewConnectionEdge {
 }
 
 /**
+ * Connection between the User type and the rabbit type
+ */
+export interface UserToRabbitConnection {
+  __typename?: "UserToRabbitConnection";
+  /**
+   * Edges for the UserToRabbitConnection connection
+   */
+  edges?: Maybe<Array<Maybe<UserToRabbitConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<Rabbit>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface UserToRabbitConnectionEdge {
+  __typename?: "UserToRabbitConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<Rabbit>;
+}
+
+/**
+ * The rabbit type
+ */
+export interface Rabbit {
+  __typename?: "Rabbit";
+  /**
+   * Connection between the NodeWithAuthor type and the User type
+   */
+  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
+  /**
+   * The database identifier of the author of the node
+   */
+  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The globally unique identifier of the author of the node
+   */
+  authorId?: Maybe<ScalarsEnums["ID"]>;
+  conditionalTags?: Maybe<ConditionalTags>;
+  /**
+   * Connection between the ContentNode type and the ContentType type
+   */
+  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
+  /**
+   * The unique identifier stored in the database
+   */
+  databaseId: ScalarsEnums["Int"];
+  /**
+   * Post publishing date.
+   */
+  date?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The publishing date set in GMT.
+   */
+  dateGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The desired slug of the post
+   */
+  desiredSlug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
+   */
+  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
+  /**
+   * The RSS enclosure for the object
+   */
+  enclosure?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedScript type
+   */
+  enqueuedScripts: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
+  /**
+   * Connection between the ContentNode type and the EnqueuedStylesheet type
+   */
+  enqueuedStylesheets: (args?: {
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */;
+    last?: Maybe<Scalars["Int"]>
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */;
+    after?: Maybe<Scalars["String"]>
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */;
+    before?: Maybe<Scalars["String"]>;
+  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
+  /**
+   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
+   */
+  guid?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The globally unique identifier of the rabbit object.
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Whether the node is a Content Node
+   */
+  isContentNode: ScalarsEnums["Boolean"];
+  /**
+   * Whether the object is a node in the preview state
+   */
+  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the object is restricted from the current viewer
+   */
+  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the node is a Term
+   */
+  isTermNode: ScalarsEnums["Boolean"];
+  /**
+   * The user that most recently edited the node
+   */
+  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
+  /**
+   * The permalink of the post
+   */
+  link?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
+   */
+  modified?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
+   */
+  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the rabbit type and the rabbit type
+   */
+  preview?: Maybe<RabbitToPreviewConnectionEdge>;
+  /**
+   * The database id of the preview node
+   */
+  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Whether the object is a node in the preview state
+   */
+  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of the databaseId field
+   */
+  rabbitId: ScalarsEnums["Int"];
+  /**
+   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
+   */
+  slug?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The current status of the object
+   */
+  status?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The template assigned to the node
+   */
+  template?: Maybe<ContentTemplate>;
+  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * The unique resource identifier path
+   */
+  uri?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Connection between the rabbit type and the rabbit type
+ */
+export interface RabbitToPreviewConnectionEdge {
+  __typename?: "RabbitToPreviewConnectionEdge";
+  /**
+   * The node of the connection, without the edges
+   */
+  node?: Maybe<Rabbit>;
+}
+
+/**
  * Connection between the User type and the ContentRevisionUnion type
  */
 export interface UserToContentRevisionUnionConnection {
@@ -16684,6 +17305,40 @@ export interface RootQueryToProShopConnectionEdge {
 }
 
 /**
+ * Connection between the RootQuery type and the rabbit type
+ */
+export interface RootQueryToRabbitConnection {
+  __typename?: "RootQueryToRabbitConnection";
+  /**
+   * Edges for the RootQueryToRabbitConnection connection
+   */
+  edges?: Maybe<Array<Maybe<RootQueryToRabbitConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<Rabbit>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface RootQueryToRabbitConnectionEdge {
+  __typename?: "RootQueryToRabbitConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<Rabbit>;
+}
+
+/**
  * The reading setting type
  */
 export interface ReadingSettings {
@@ -17240,6 +17895,21 @@ export interface CreateProShopPayload {
 }
 
 /**
+ * The payload for the createRabbit mutation
+ */
+export interface CreateRabbitPayload {
+  __typename?: "CreateRabbitPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The Post object mutation type.
+   */
+  rabbit?: Maybe<Rabbit>;
+}
+
+/**
  * The payload for the createTag mutation
  */
 export interface CreateTagPayload {
@@ -17476,6 +18146,25 @@ export interface DeleteProShopPayload {
    * The object before it was deleted
    */
   proShop?: Maybe<ProShop>;
+}
+
+/**
+ * The payload for the deleteRabbit mutation
+ */
+export interface DeleteRabbitPayload {
+  __typename?: "DeleteRabbitPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The ID of the deleted object
+   */
+  deletedId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The object before it was deleted
+   */
+  rabbit?: Maybe<Rabbit>;
 }
 
 /**
@@ -17797,6 +18486,21 @@ export interface UpdateProShopPayload {
 }
 
 /**
+ * The payload for the updateRabbit mutation
+ */
+export interface UpdateRabbitPayload {
+  __typename?: "UpdateRabbitPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The Post object mutation type.
+   */
+  rabbit?: Maybe<Rabbit>;
+}
+
+/**
  * The payload for the updateSettings mutation
  */
 export interface UpdateSettingsPayload {
@@ -18034,6 +18738,10 @@ export interface SchemaObjectTypes {
   UserToProShopConnectionEdge: UserToProShopConnectionEdge;
   ProShop: ProShop;
   ProShopToPreviewConnectionEdge: ProShopToPreviewConnectionEdge;
+  UserToRabbitConnection: UserToRabbitConnection;
+  UserToRabbitConnectionEdge: UserToRabbitConnectionEdge;
+  Rabbit: Rabbit;
+  RabbitToPreviewConnectionEdge: RabbitToPreviewConnectionEdge;
   UserToContentRevisionUnionConnection: UserToContentRevisionUnionConnection;
   UserToContentRevisionUnionConnectionEdge: UserToContentRevisionUnionConnectionEdge;
   UserToUserRoleConnection: UserToUserRoleConnection;
@@ -18084,6 +18792,8 @@ export interface SchemaObjectTypes {
   RootQueryToPostConnectionEdge: RootQueryToPostConnectionEdge;
   RootQueryToProShopConnection: RootQueryToProShopConnection;
   RootQueryToProShopConnectionEdge: RootQueryToProShopConnectionEdge;
+  RootQueryToRabbitConnection: RootQueryToRabbitConnection;
+  RootQueryToRabbitConnectionEdge: RootQueryToRabbitConnectionEdge;
   ReadingSettings: ReadingSettings;
   RootQueryToEnqueuedScriptConnection: RootQueryToEnqueuedScriptConnection;
   RootQueryToEnqueuedScriptConnectionEdge: RootQueryToEnqueuedScriptConnectionEdge;
@@ -18116,6 +18826,7 @@ export interface SchemaObjectTypes {
   CreatePostPayload: CreatePostPayload;
   CreatePostFormatPayload: CreatePostFormatPayload;
   CreateProShopPayload: CreateProShopPayload;
+  CreateRabbitPayload: CreateRabbitPayload;
   CreateTagPayload: CreateTagPayload;
   CreateUserPayload: CreateUserPayload;
   DeleteCategoryPayload: DeleteCategoryPayload;
@@ -18129,6 +18840,7 @@ export interface SchemaObjectTypes {
   DeletePostPayload: DeletePostPayload;
   DeletePostFormatPayload: DeletePostFormatPayload;
   DeleteProShopPayload: DeleteProShopPayload;
+  DeleteRabbitPayload: DeleteRabbitPayload;
   DeleteTagPayload: DeleteTagPayload;
   DeleteUserPayload: DeleteUserPayload;
   GenerateAuthorizationCodePayload: GenerateAuthorizationCodePayload;
@@ -18148,6 +18860,7 @@ export interface SchemaObjectTypes {
   UpdatePostPayload: UpdatePostPayload;
   UpdatePostFormatPayload: UpdatePostFormatPayload;
   UpdateProShopPayload: UpdateProShopPayload;
+  UpdateRabbitPayload: UpdateRabbitPayload;
   UpdateSettingsPayload: UpdateSettingsPayload;
   UpdateTagPayload: UpdateTagPayload;
   UpdateUserPayload: UpdateUserPayload;
@@ -18279,6 +18992,10 @@ export type SchemaObjectTypesNames =
   | "UserToProShopConnectionEdge"
   | "ProShop"
   | "ProShopToPreviewConnectionEdge"
+  | "UserToRabbitConnection"
+  | "UserToRabbitConnectionEdge"
+  | "Rabbit"
+  | "RabbitToPreviewConnectionEdge"
   | "UserToContentRevisionUnionConnection"
   | "UserToContentRevisionUnionConnectionEdge"
   | "UserToUserRoleConnection"
@@ -18329,6 +19046,8 @@ export type SchemaObjectTypesNames =
   | "RootQueryToPostConnectionEdge"
   | "RootQueryToProShopConnection"
   | "RootQueryToProShopConnectionEdge"
+  | "RootQueryToRabbitConnection"
+  | "RootQueryToRabbitConnectionEdge"
   | "ReadingSettings"
   | "RootQueryToEnqueuedScriptConnection"
   | "RootQueryToEnqueuedScriptConnectionEdge"
@@ -18361,6 +19080,7 @@ export type SchemaObjectTypesNames =
   | "CreatePostPayload"
   | "CreatePostFormatPayload"
   | "CreateProShopPayload"
+  | "CreateRabbitPayload"
   | "CreateTagPayload"
   | "CreateUserPayload"
   | "DeleteCategoryPayload"
@@ -18374,6 +19094,7 @@ export type SchemaObjectTypesNames =
   | "DeletePostPayload"
   | "DeletePostFormatPayload"
   | "DeleteProShopPayload"
+  | "DeleteRabbitPayload"
   | "DeleteTagPayload"
   | "DeleteUserPayload"
   | "GenerateAuthorizationCodePayload"
@@ -18393,6 +19114,7 @@ export type SchemaObjectTypesNames =
   | "UpdatePostPayload"
   | "UpdatePostFormatPayload"
   | "UpdateProShopPayload"
+  | "UpdateRabbitPayload"
   | "UpdateSettingsPayload"
   | "UpdateTagPayload"
   | "UpdateUserPayload"
@@ -18418,6 +19140,7 @@ export interface $Node {
   PostFormat?: PostFormat;
   Tag?: Tag;
   ProShop?: ProShop;
+  Rabbit?: Rabbit;
   UserRole?: UserRole;
   Menu?: Menu;
   MenuItem?: MenuItem;
@@ -18446,6 +19169,7 @@ export interface $UniformResourceIdentifiable {
   PostFormat?: PostFormat;
   Tag?: Tag;
   ProShop?: ProShop;
+  Rabbit?: Rabbit;
 }
 
 export interface $DatabaseIdentifier {
@@ -18462,6 +19186,7 @@ export interface $DatabaseIdentifier {
   PostFormat?: PostFormat;
   Tag?: Tag;
   ProShop?: ProShop;
+  Rabbit?: Rabbit;
   Menu?: Menu;
   MenuItem?: MenuItem;
 }
@@ -18496,6 +19221,7 @@ export interface $ContentNode {
   Page?: Page;
   Post?: Post;
   ProShop?: ProShop;
+  Rabbit?: Rabbit;
 }
 
 export interface $NodeWithTemplate {
@@ -18507,6 +19233,7 @@ export interface $NodeWithTemplate {
   Page?: Page;
   Post?: Post;
   ProShop?: ProShop;
+  Rabbit?: Rabbit;
 }
 
 export interface $NodeWithAuthor {
@@ -18518,6 +19245,7 @@ export interface $NodeWithAuthor {
   Page?: Page;
   Post?: Post;
   ProShop?: ProShop;
+  Rabbit?: Rabbit;
 }
 
 export interface $NodeWithTitle {
@@ -18630,6 +19358,7 @@ export interface ScalarsEnums extends MakeNullable<Scalars> {
   PostIdType: PostIdType | undefined;
   PostFormatIdType: PostFormatIdType | undefined;
   ProShopIdType: ProShopIdType | undefined;
+  RabbitIdType: RabbitIdType | undefined;
   TagIdType: TagIdType | undefined;
   TaxonomyIdTypeEnum: TaxonomyIdTypeEnum | undefined;
   TermNodeIdTypeEnum: TermNodeIdTypeEnum | undefined;
